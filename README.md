@@ -4,13 +4,20 @@ A man-page-style lookup tool for tech industry abbreviations, right from your te
 
 ## Installation
 
-Add `abbr` to your PATH with the install script:
-
 ```sh
+git clone https://github.com/captlardass/TechAbbreviations.git
+cd TechAbbreviations
 ./install.sh
 ```
 
-This symlinks `techabbr.py` to `~/.local/bin/abbr`. Pass a different directory as an argument if you'd rather use somewhere else, e.g. `./install.sh /usr/local/bin`. Make sure that directory is on your `PATH` (the script will tell you if it isn't).
+This symlinks `techabbr.py` to `~/.local/bin/abbr`. Pass a different directory as an argument if you'd rather install somewhere else, e.g. `./install.sh /usr/local/bin`. Make sure that directory is on your `PATH` (the script will tell you if it isn't).
+
+If `./install.sh` fails with a "permission denied" error, the scripts lost their executable bit — this usually happens if you downloaded the repo as a ZIP instead of cloning it. Fix it with:
+
+```sh
+chmod +x install.sh techabbr.py
+./install.sh
+```
 
 ## Usage
 
