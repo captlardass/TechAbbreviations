@@ -16,6 +16,50 @@ def load_entries():
         return json.load(f)
 
 
+def save_entries(entries):
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
+def prompt(label, required=False):
+    while True:
+        value = input(f"{label}: ").strip()
+        if value or not required:
+            return value
+        print(f"{label} is required.")
+
+
+def add_entry_interactive(entries):
+    print("Add a new abbreviation (Ctrl+C to cancel).\n")
+    abbr = prompt("Abbreviation (e.g. API)", required=True)
+
+    if find_exact(entries, abbr):
+        print(f"'{abbr}' already exists. Run 'abbr {abbr}' to see it.")
+        return
+
+    full = prompt("Full name (e.g. Application Programming Interface)", required=True)
+    category = prompt("Category (e.g. Software)", required=True)
+    short = prompt("Short description (one line)", required=True)
+    description = prompt("Full description")
+    example = prompt("Example (optional)")
+    see_also_raw = prompt("See also (comma-separated abbreviations, optional)")
+    see_also = [s.strip() for s in see_also_raw.split(",") if s.strip()]
+
+    entry = {
+        "abbr": abbr,
+        "full": full,
+        "category": category,
+        "short": short,
+        "description": description or short,
+        "example": example,
+        "see_also": see_also,
+    }
+    entries.append(entry)
+    save_entries(entries)
+    print(f"\nAdded '{abbr}'. Run 'abbr {abbr}' to see it.")
+
+
 def term_width():
     return shutil.get_terminal_size(fallback=(100, 24)).columns
 
@@ -114,6 +158,15 @@ def main():
     parser = argparse.ArgumentParser(
         prog="abbr",
         description="Look up tech industry abbreviations, man-page style.",
+        epilog=(
+            "Adding your own abbreviations:\n"
+            "  abbr --add\n"
+            "      Starts an interactive prompt asking for the abbreviation,\n"
+            "      full name, category, short description, full description,\n"
+            "      an optional example, and optional 'see also' terms.\n"
+            "      The entry is saved straight into abbreviations.json."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
         "term", nargs="?", help="abbreviation to look up, e.g. 'API'"
@@ -127,9 +180,16 @@ def main():
     parser.add_argument(
         "-l", "--list-categories", action="store_true", help="list all categories"
     )
+    parser.add_argument(
+        "-a", "--add", action="store_true", help="add a new abbreviation (interactive)"
+    )
     args = parser.parse_args()
 
     entries = load_entries()
+
+    if args.add:
+        add_entry_interactive(entries)
+        return
 
     if args.list_categories:
         list_categories(entries)
