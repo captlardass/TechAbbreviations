@@ -7,6 +7,11 @@ A man-page-style lookup tool for tech industry abbreviations, right from your te
 ```sh
 git clone https://github.com/captlardass/TechAbbreviations.git
 cd TechAbbreviations
+```
+
+### macOS / Linux
+
+```sh
 ./install.sh
 ```
 
@@ -17,6 +22,22 @@ If `./install.sh` fails with a "permission denied" error, the scripts lost their
 ```sh
 chmod +x install.sh techabbr.py
 ./install.sh
+```
+
+### Windows
+
+Requires Python 3 installed and available as `python` or `py`. In PowerShell:
+
+```powershell
+.\install.ps1
+```
+
+This creates an `abbr.cmd` wrapper in `%USERPROFILE%\bin` that calls `techabbr.py` for you. Pass a different directory as an argument to install elsewhere, e.g. `.\install.ps1 -TargetDir C:\tools`. If that directory isn't already on your `PATH`, the script prints the exact command to add it.
+
+If PowerShell blocks the script with an execution-policy error, run it once with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
 ## Usage
