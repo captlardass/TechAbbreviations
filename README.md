@@ -62,11 +62,32 @@ abbr -s cache            # search abbreviations, names, and descriptions
 abbr -c Networking       # show only abbreviations in a category
 abbr -l                  # list all categories
 abbr --add               # add your own abbreviation (interactive)
+abbr --tui               # launch the interactive full-screen browser
+```
+
+## TUI mode
+
+```sh
+abbr --tui
+```
+
+Opens a full-screen browser instead of printing to the terminal:
+
+- Type to filter the list as you go.
+- `↑` / `↓` to move the selection.
+- `Enter` to open the man-page-style view for the selected entry (`↑` / `↓` scroll it, any other key goes back).
+- `Backspace` to edit the search.
+- `Esc` clears the search, or quits if the search is already empty.
+
+TUI mode needs Python's `curses` module. It's built into Python on macOS and Linux. On Windows, install the missing piece with:
+
+```powershell
+pip install windows-curses
 ```
 
 ## Requirements
 
-Python 3, no external dependencies.
+Python 3, no external dependencies (Windows TUI mode needs `windows-curses`, see above).
 
 ## Data
 
