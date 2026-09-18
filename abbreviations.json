@@ -1,0 +1,2818 @@
+[
+  {
+    "abbr": "API",
+    "full": "Application Programming Interface",
+    "category": "Software",
+    "short": "A contract that lets two pieces of software talk to each other.",
+    "description": "A defined set of rules and endpoints that lets one program request data or functionality from another, without either side needing to know the other's internals.",
+    "example": "A weather app calls a weather service's API to fetch today's forecast as JSON.",
+    "see_also": [
+      "REST",
+      "SDK",
+      "RPC",
+      "JSON"
+    ]
+  },
+  {
+    "abbr": "REST",
+    "full": "Representational State Transfer",
+    "category": "Web",
+    "short": "An architectural style for web APIs built on standard HTTP verbs.",
+    "description": "A set of constraints for designing networked APIs where resources are addressed by URLs and manipulated using HTTP methods like GET, POST, PUT and DELETE.",
+    "example": "GET /users/42 returns the JSON representation of user 42.",
+    "see_also": [
+      "API",
+      "HTTP",
+      "CRUD",
+      "JSON"
+    ]
+  },
+  {
+    "abbr": "HTTP",
+    "full": "HyperText Transfer Protocol",
+    "category": "Networking",
+    "short": "The protocol web browsers and servers use to exchange pages and data.",
+    "description": "An application-layer protocol for transmitting hypermedia documents. Requests carry a method (GET, POST, ...), headers and an optional body; responses carry a status code and body.",
+    "example": "A browser sends 'GET / HTTP/1.1' to request a website's homepage.",
+    "see_also": [
+      "HTTPS",
+      "REST",
+      "URL",
+      "TCP"
+    ]
+  },
+  {
+    "abbr": "HTTPS",
+    "full": "HTTP Secure",
+    "category": "Networking",
+    "short": "HTTP encrypted with TLS.",
+    "description": "HTTP layered on top of TLS/SSL so traffic between client and server is encrypted and authenticated, preventing eavesdropping and tampering.",
+    "example": "Banking sites always use HTTPS to protect login credentials in transit.",
+    "see_also": [
+      "HTTP",
+      "TLS",
+      "SSL"
+    ]
+  },
+  {
+    "abbr": "TLS",
+    "full": "Transport Layer Security",
+    "category": "Security",
+    "short": "The cryptographic protocol that secures most internet traffic.",
+    "description": "A protocol that provides encryption, integrity and authentication for data sent over a network. It is the successor to SSL and underlies HTTPS.",
+    "example": "A TLS handshake negotiates a shared key before a browser and server exchange encrypted data.",
+    "see_also": [
+      "SSL",
+      "HTTPS",
+      "PKI"
+    ]
+  },
+  {
+    "abbr": "SSL",
+    "full": "Secure Sockets Layer",
+    "category": "Security",
+    "short": "The predecessor to TLS; deprecated but the name persists colloquially.",
+    "description": "An older cryptographic protocol for securing network connections. All SSL versions are considered insecure and have been replaced by TLS, though people still say 'SSL certificate' out of habit.",
+    "example": "An 'SSL certificate' bought today is actually used to enable TLS.",
+    "see_also": [
+      "TLS",
+      "HTTPS",
+      "PKI"
+    ]
+  },
+  {
+    "abbr": "URL",
+    "full": "Uniform Resource Locator",
+    "category": "Web",
+    "short": "The address of a resource on the internet.",
+    "description": "A string that specifies the location of a resource and the protocol used to access it, e.g. scheme, host, path and query string.",
+    "example": "https://example.com/products?id=7 is a URL pointing to a product page.",
+    "see_also": [
+      "URI",
+      "HTTP",
+      "DNS"
+    ]
+  },
+  {
+    "abbr": "URI",
+    "full": "Uniform Resource Identifier",
+    "category": "Web",
+    "short": "A superset of URL that identifies a resource, not necessarily its location.",
+    "description": "A generic identifier for a resource; a URL is a URI that also tells you how to access the resource. All URLs are URIs, not all URIs are URLs.",
+    "example": "urn:isbn:0451450523 is a URI but not a URL.",
+    "see_also": [
+      "URL"
+    ]
+  },
+  {
+    "abbr": "DNS",
+    "full": "Domain Name System",
+    "category": "Networking",
+    "short": "The internet's phonebook, mapping domain names to IP addresses.",
+    "description": "A hierarchical, distributed naming system that translates human-readable domain names into the IP addresses computers use to route traffic.",
+    "example": "Typing example.com triggers a DNS lookup that resolves to something like 93.184.216.34.",
+    "see_also": [
+      "IP",
+      "TCP",
+      "CDN"
+    ]
+  },
+  {
+    "abbr": "IP",
+    "full": "Internet Protocol",
+    "category": "Networking",
+    "short": "The protocol that routes packets across networks using addresses.",
+    "description": "The principal protocol for addressing and routing packets of data so they can travel across interconnected networks to reach their destination.",
+    "example": "Every device on the internet has an IP address such as 192.0.2.1 or 2001:db8::1.",
+    "see_also": [
+      "TCP",
+      "UDP",
+      "DNS"
+    ]
+  },
+  {
+    "abbr": "TCP",
+    "full": "Transmission Control Protocol",
+    "category": "Networking",
+    "short": "A reliable, ordered, connection-based transport protocol.",
+    "description": "A transport-layer protocol that guarantees ordered, error-checked delivery of a stream of bytes between applications, at the cost of more overhead than UDP.",
+    "example": "Loading a web page relies on a TCP connection to reliably deliver the HTML.",
+    "see_also": [
+      "IP",
+      "UDP",
+      "HTTP"
+    ]
+  },
+  {
+    "abbr": "UDP",
+    "full": "User Datagram Protocol",
+    "category": "Networking",
+    "short": "A fast, connectionless transport protocol with no delivery guarantees.",
+    "description": "A lightweight transport-layer protocol that sends packets without establishing a connection or guaranteeing delivery or order, trading reliability for speed.",
+    "example": "Online games and video calls often use UDP to minimize latency.",
+    "see_also": [
+      "TCP",
+      "IP"
+    ]
+  },
+  {
+    "abbr": "JSON",
+    "full": "JavaScript Object Notation",
+    "category": "Data",
+    "short": "A lightweight, human-readable data interchange format.",
+    "description": "A text format for structured data using key-value pairs, arrays and nested objects. Language-independent despite the JavaScript name, and the default format for most modern APIs.",
+    "example": "{\"name\": \"Ada\", \"active\": true} is a JSON object.",
+    "see_also": [
+      "XML",
+      "YAML",
+      "API"
+    ]
+  },
+  {
+    "abbr": "XML",
+    "full": "eXtensible Markup Language",
+    "category": "Data",
+    "short": "A verbose, tag-based markup format for structured data.",
+    "description": "A markup language that defines rules for encoding documents in a format readable by both humans and machines, using nested tags. Common in older enterprise systems and config formats.",
+    "example": "<user><name>Ada</name></user> is an XML fragment.",
+    "see_also": [
+      "JSON",
+      "HTML",
+      "SOAP"
+    ]
+  },
+  {
+    "abbr": "YAML",
+    "full": "YAML Ain't Markup Language",
+    "category": "Data",
+    "short": "A human-friendly data format popular for config files.",
+    "description": "A whitespace-sensitive, indentation-based serialization format designed to be easy for humans to read and write. Widely used for configuration, especially in DevOps tooling.",
+    "example": "Kubernetes manifests and GitHub Actions workflows are written in YAML.",
+    "see_also": [
+      "JSON",
+      "CI/CD"
+    ]
+  },
+  {
+    "abbr": "HTML",
+    "full": "HyperText Markup Language",
+    "category": "Web",
+    "short": "The markup language that structures content on the web.",
+    "description": "The standard markup language for documents displayed in a web browser, defining structure via elements like headings, paragraphs, links and images.",
+    "example": "<h1>Hello</h1> renders as a large heading on a page.",
+    "see_also": [
+      "CSS",
+      "DOM",
+      "HTTP"
+    ]
+  },
+  {
+    "abbr": "CSS",
+    "full": "Cascading Style Sheets",
+    "category": "Web",
+    "short": "The language used to style and lay out HTML.",
+    "description": "A stylesheet language that controls the visual presentation of HTML documents, including layout, color, typography and responsive behavior.",
+    "example": "body { color: navy; } makes all body text navy blue.",
+    "see_also": [
+      "HTML",
+      "DOM",
+      "SASS"
+    ]
+  },
+  {
+    "abbr": "DOM",
+    "full": "Document Object Model",
+    "category": "Web",
+    "short": "The in-memory tree representation of an HTML page.",
+    "description": "A programming interface that represents an HTML or XML document as a tree of objects, which scripts can traverse and modify to change what's displayed.",
+    "example": "document.getElementById('title') accesses a DOM node by its id.",
+    "see_also": [
+      "HTML",
+      "CSS",
+      "SPA"
+    ]
+  },
+  {
+    "abbr": "SPA",
+    "full": "Single Page Application",
+    "category": "Web",
+    "short": "A web app that loads once and updates content dynamically.",
+    "description": "A web application architecture where a single HTML page is loaded and JavaScript dynamically rewrites the page instead of requesting whole new pages from the server.",
+    "example": "Gmail is an SPA: navigating between emails doesn't reload the browser tab.",
+    "see_also": [
+      "DOM",
+      "SSR",
+      "CSR"
+    ]
+  },
+  {
+    "abbr": "SSR",
+    "full": "Server-Side Rendering",
+    "category": "Web",
+    "short": "Generating HTML on the server before sending it to the browser.",
+    "description": "A rendering strategy where the server builds the full HTML for a page before sending it to the client, improving initial load time and SEO compared to pure client-side rendering.",
+    "example": "Next.js can server-render a page so users see content before JavaScript loads.",
+    "see_also": [
+      "CSR",
+      "SPA",
+      "SEO"
+    ]
+  },
+  {
+    "abbr": "CSR",
+    "full": "Client-Side Rendering",
+    "category": "Web",
+    "short": "Building the page's HTML in the browser using JavaScript.",
+    "description": "A rendering strategy where the browser downloads a minimal HTML shell and JavaScript, then builds the page's DOM on the client.",
+    "example": "A React app that renders everything after the JS bundle loads uses CSR.",
+    "see_also": [
+      "SSR",
+      "SPA",
+      "DOM"
+    ]
+  },
+  {
+    "abbr": "SEO",
+    "full": "Search Engine Optimization",
+    "category": "Web",
+    "short": "Practices that improve a site's ranking in search results.",
+    "description": "Techniques for making a website more discoverable and higher-ranked by search engines, covering content, page speed, metadata and link structure.",
+    "example": "Adding descriptive title tags and alt text improves a page's SEO.",
+    "see_also": [
+      "SSR",
+      "CDN"
+    ]
+  },
+  {
+    "abbr": "CRUD",
+    "full": "Create, Read, Update, Delete",
+    "category": "Software",
+    "short": "The four basic operations of persistent storage.",
+    "description": "An acronym for the four fundamental operations most data-backed applications need to support against a database or resource.",
+    "example": "A REST API for a blog typically exposes CRUD endpoints for posts.",
+    "see_also": [
+      "REST",
+      "SQL",
+      "ORM"
+    ]
+  },
+  {
+    "abbr": "SQL",
+    "full": "Structured Query Language",
+    "category": "Databases",
+    "short": "The standard language for querying relational databases.",
+    "description": "A domain-specific language used to define, query and manipulate data stored in relational database management systems.",
+    "example": "SELECT * FROM users WHERE active = true; fetches all active users.",
+    "see_also": [
+      "NoSQL",
+      "ORM",
+      "RDBMS"
+    ]
+  },
+  {
+    "abbr": "NoSQL",
+    "full": "Not Only SQL",
+    "category": "Databases",
+    "short": "Non-relational databases built for flexibility or scale.",
+    "description": "A broad category of databases that don't use the traditional relational table model, including document, key-value, column and graph stores, often chosen for horizontal scalability or flexible schemas.",
+    "example": "MongoDB stores records as JSON-like documents instead of rows and columns.",
+    "see_also": [
+      "SQL",
+      "RDBMS"
+    ]
+  },
+  {
+    "abbr": "RDBMS",
+    "full": "Relational Database Management System",
+    "category": "Databases",
+    "short": "Software that manages data organized into related tables.",
+    "description": "A database system built around the relational model, where data lives in tables with rows and columns and relationships are enforced via keys.",
+    "example": "PostgreSQL and MySQL are both RDBMS software.",
+    "see_also": [
+      "SQL",
+      "ORM"
+    ]
+  },
+  {
+    "abbr": "ORM",
+    "full": "Object-Relational Mapping",
+    "category": "Software",
+    "short": "A library that maps database rows to objects in your code.",
+    "description": "A technique and set of tools that let developers interact with a relational database using the object-oriented paradigm of their programming language, instead of writing raw SQL.",
+    "example": "In Django, User.objects.filter(active=True) generates SQL behind the scenes.",
+    "see_also": [
+      "SQL",
+      "RDBMS",
+      "CRUD"
+    ]
+  },
+  {
+    "abbr": "CI/CD",
+    "full": "Continuous Integration / Continuous Delivery (or Deployment)",
+    "category": "DevOps",
+    "short": "Automated pipelines for testing and shipping code changes.",
+    "description": "A set of practices where code changes are automatically built, tested (CI) and released or deployed (CD), reducing manual steps and catching issues early.",
+    "example": "A GitHub Actions workflow runs tests on every pull request and deploys on merge to main.",
+    "see_also": [
+      "YAML",
+      "IaC",
+      "K8s"
+    ]
+  },
+  {
+    "abbr": "IaC",
+    "full": "Infrastructure as Code",
+    "category": "DevOps",
+    "short": "Managing infrastructure through versioned config files instead of manual steps.",
+    "description": "The practice of defining and provisioning infrastructure (servers, networks, databases) through machine-readable configuration files, enabling versioning, review and repeatability.",
+    "example": "A Terraform file describing an AWS VPC is a form of IaC.",
+    "see_also": [
+      "CI/CD",
+      "K8s"
+    ]
+  },
+  {
+    "abbr": "K8s",
+    "full": "Kubernetes",
+    "category": "DevOps",
+    "short": "An open-source system for orchestrating containerized applications.",
+    "description": "A container orchestration platform that automates deployment, scaling and management of containerized workloads across a cluster of machines. The '8' replaces the 8 letters between K and s.",
+    "example": "A K8s Deployment can automatically restart a crashed container.",
+    "see_also": [
+      "Docker",
+      "IaC",
+      "CI/CD"
+    ]
+  },
+  {
+    "abbr": "VM",
+    "full": "Virtual Machine",
+    "category": "Infrastructure",
+    "short": "A software-emulated computer running on physical hardware.",
+    "description": "An emulation of a physical computer, including its own OS kernel, running on top of a hypervisor that shares underlying hardware among multiple VMs.",
+    "example": "A cloud provider can spin up a VM running Ubuntu in seconds.",
+    "see_also": [
+      "Docker",
+      "IaaS"
+    ]
+  },
+  {
+    "abbr": "SaaS",
+    "full": "Software as a Service",
+    "category": "Cloud",
+    "short": "Software delivered over the internet rather than installed locally.",
+    "description": "A cloud software delivery model where a provider hosts an application and customers access it over the internet, typically via subscription, without managing infrastructure.",
+    "example": "Slack and Gmail are SaaS products.",
+    "see_also": [
+      "PaaS",
+      "IaaS"
+    ]
+  },
+  {
+    "abbr": "PaaS",
+    "full": "Platform as a Service",
+    "category": "Cloud",
+    "short": "A managed platform for running apps without managing servers.",
+    "description": "A cloud model that provides a managed runtime, tooling and infrastructure so developers can deploy applications without configuring the underlying servers or OS.",
+    "example": "Heroku lets you 'git push' code and it handles the servers.",
+    "see_also": [
+      "SaaS",
+      "IaaS"
+    ]
+  },
+  {
+    "abbr": "IaaS",
+    "full": "Infrastructure as a Service",
+    "category": "Cloud",
+    "short": "Raw compute, storage and networking rented from a cloud provider.",
+    "description": "A cloud model offering fundamental building blocks — virtual machines, storage and networks — that customers configure and manage themselves.",
+    "example": "Renting an EC2 instance on AWS is consuming IaaS.",
+    "see_also": [
+      "PaaS",
+      "SaaS",
+      "VM"
+    ]
+  },
+  {
+    "abbr": "CDN",
+    "full": "Content Delivery Network",
+    "category": "Networking",
+    "short": "A distributed network of servers that caches content close to users.",
+    "description": "A geographically distributed set of servers that cache and serve content from locations near end users, reducing latency and load on the origin server.",
+    "example": "Cloudflare serves a website's images from a server near the visitor instead of the origin.",
+    "see_also": [
+      "DNS",
+      "SEO"
+    ]
+  },
+  {
+    "abbr": "CLI",
+    "full": "Command Line Interface",
+    "category": "Software",
+    "short": "A text-based way to interact with a program via typed commands.",
+    "description": "An interface where users interact with software by typing text commands into a terminal, as opposed to clicking through a graphical interface.",
+    "example": "git commit -m \"fix bug\" is a CLI command.",
+    "see_also": [
+      "GUI",
+      "TUI",
+      "SDK"
+    ]
+  },
+  {
+    "abbr": "GUI",
+    "full": "Graphical User Interface",
+    "category": "Software",
+    "short": "A visual interface controlled with a mouse, touch or similar.",
+    "description": "An interface that lets users interact with a system through visual elements like windows, icons, buttons and menus rather than typed commands.",
+    "example": "Finder on macOS is a GUI for the filesystem.",
+    "see_also": [
+      "CLI",
+      "TUI",
+      "UX"
+    ]
+  },
+  {
+    "abbr": "TUI",
+    "full": "Text-based User Interface",
+    "category": "Software",
+    "short": "An interactive, visual interface rendered in a terminal.",
+    "description": "An interface that uses text characters in a terminal to create interactive layouts, menus and widgets, sitting between a plain CLI and a full GUI.",
+    "example": "htop is a TUI for monitoring system processes.",
+    "see_also": [
+      "CLI",
+      "GUI"
+    ]
+  },
+  {
+    "abbr": "SDK",
+    "full": "Software Development Kit",
+    "category": "Software",
+    "short": "A bundle of tools and libraries for building on a platform.",
+    "description": "A collection of tools, libraries, documentation and sample code provided to help developers build applications for a specific platform, framework or service.",
+    "example": "The Android SDK provides the tools needed to build Android apps.",
+    "see_also": [
+      "API",
+      "CLI"
+    ]
+  },
+  {
+    "abbr": "IDE",
+    "full": "Integrated Development Environment",
+    "category": "Software",
+    "short": "An all-in-one application for writing and debugging code.",
+    "description": "A software application that combines a code editor, debugger, build tools and often version control integration into a single interface. Note: in hardware/storage contexts, IDE instead means Integrated Drive Electronics, an older disk interface standard superseded by SATA.",
+    "example": "Visual Studio Code and IntelliJ IDEA are popular IDEs.",
+    "see_also": [
+      "CLI",
+      "SDK"
+    ]
+  },
+  {
+    "abbr": "VCS",
+    "full": "Version Control System",
+    "category": "Software",
+    "short": "A system for tracking changes to files over time.",
+    "description": "Software that records changes to files so specific versions can be recalled later, enabling collaboration and history tracking.",
+    "example": "Git is the most widely used VCS today.",
+    "see_also": [
+      "PR",
+      "CI/CD"
+    ]
+  },
+  {
+    "abbr": "PR",
+    "full": "Pull Request",
+    "category": "Software",
+    "short": "A proposal to merge one branch's changes into another.",
+    "description": "A request, usually on a platform like GitHub or GitLab, to merge changes from one branch into another, typically triggering review and automated checks first.",
+    "example": "A developer opens a PR to merge their feature branch into main.",
+    "see_also": [
+      "VCS",
+      "CI/CD",
+      "MR"
+    ]
+  },
+  {
+    "abbr": "MR",
+    "full": "Merge Request",
+    "category": "Software",
+    "short": "GitLab's term for what GitHub calls a pull request.",
+    "description": "The GitLab equivalent of a pull request: a proposal to merge changes from one branch into another after review.",
+    "example": "On GitLab you open an MR instead of a PR.",
+    "see_also": [
+      "PR",
+      "VCS"
+    ]
+  },
+  {
+    "abbr": "MVP",
+    "full": "Minimum Viable Product",
+    "category": "Product",
+    "short": "The smallest version of a product that still delivers value.",
+    "description": "A version of a product with just enough features to be usable by early customers, built to validate ideas with minimal effort before investing further.",
+    "example": "A startup ships an MVP with only login and one core feature to test demand.",
+    "see_also": [
+      "POC",
+      "MMP"
+    ]
+  },
+  {
+    "abbr": "POC",
+    "full": "Proof of Concept",
+    "category": "Product",
+    "short": "A small exercise to verify an idea is technically feasible.",
+    "description": "A limited implementation built to demonstrate that a concept or approach is viable, without the polish or completeness of production software.",
+    "example": "Engineers build a POC to see whether a new algorithm can run fast enough.",
+    "see_also": [
+      "MVP"
+    ]
+  },
+  {
+    "abbr": "KPI",
+    "full": "Key Performance Indicator",
+    "category": "Business",
+    "short": "A measurable value used to track progress toward a goal.",
+    "description": "A quantifiable metric used by organizations to evaluate their success at reaching business or operational objectives.",
+    "example": "Monthly active users is a common KPI for consumer apps.",
+    "see_also": [
+      "OKR",
+      "SLA"
+    ]
+  },
+  {
+    "abbr": "OKR",
+    "full": "Objectives and Key Results",
+    "category": "Business",
+    "short": "A goal-setting framework pairing qualitative goals with measurable results.",
+    "description": "A goal-setting framework where an ambitious 'objective' is paired with specific, measurable 'key results' used to track whether it was achieved.",
+    "example": "Objective: 'Improve onboarding.' Key result: 'Reduce signup time to under 2 minutes.'",
+    "see_also": [
+      "KPI"
+    ]
+  },
+  {
+    "abbr": "SLA",
+    "full": "Service Level Agreement",
+    "category": "Business",
+    "short": "A contractual commitment about a service's reliability or performance.",
+    "description": "A formal agreement, often between a vendor and customer, defining expected service levels such as uptime, response time or support turnaround, usually with penalties for breaches.",
+    "example": "A cloud provider's SLA might guarantee 99.9% uptime.",
+    "see_also": [
+      "SLO",
+      "SLI"
+    ]
+  },
+  {
+    "abbr": "SLO",
+    "full": "Service Level Objective",
+    "category": "Business",
+    "short": "An internal target for a service's reliability, underpinning an SLA.",
+    "description": "A specific, measurable target for a service level (e.g. latency, availability) that a team aims to meet internally, typically stricter than what's promised in a customer-facing SLA.",
+    "example": "An SLO of 99.95% uptime might back a customer-facing 99.9% SLA.",
+    "see_also": [
+      "SLA",
+      "SLI"
+    ]
+  },
+  {
+    "abbr": "SLI",
+    "full": "Service Level Indicator",
+    "category": "Business",
+    "short": "The actual measured metric used to judge an SLO.",
+    "description": "A quantitative measurement of some aspect of a service's behavior, such as request latency or error rate, used to determine whether an SLO is being met.",
+    "example": "The percentage of requests served under 200ms is an SLI.",
+    "see_also": [
+      "SLO",
+      "SLA"
+    ]
+  },
+  {
+    "abbr": "UX",
+    "full": "User Experience",
+    "category": "Design",
+    "short": "How a person feels using a product, encompassing usability and flow.",
+    "description": "The overall experience a person has when interacting with a product or service, covering usability, accessibility, efficiency and emotional response.",
+    "example": "Reducing checkout from 5 steps to 2 improves UX.",
+    "see_also": [
+      "UI",
+      "GUI"
+    ]
+  },
+  {
+    "abbr": "UI",
+    "full": "User Interface",
+    "category": "Design",
+    "short": "The visual and interactive surface a user directly interacts with.",
+    "description": "The point of interaction between a user and a system, encompassing screens, buttons, icons and other elements the user directly sees and manipulates.",
+    "example": "A redesigned UI might use larger buttons for easier tapping.",
+    "see_also": [
+      "UX",
+      "GUI"
+    ]
+  },
+  {
+    "abbr": "A/B",
+    "full": "A/B Testing",
+    "category": "Product",
+    "short": "Comparing two variants to see which performs better.",
+    "description": "An experimentation method where two versions (A and B) of something are shown to different user segments to measure which performs better against a defined metric.",
+    "example": "An A/B test shows a green button converts better than a blue one.",
+    "see_also": [
+      "KPI"
+    ]
+  },
+  {
+    "abbr": "JWT",
+    "full": "JSON Web Token",
+    "category": "Security",
+    "short": "A compact, signed token format used for authentication.",
+    "description": "A URL-safe, self-contained token format that encodes claims as JSON and is digitally signed, commonly used to authenticate API requests without server-side session storage.",
+    "example": "After login, a server issues a JWT that the client sends in the Authorization header on later requests.",
+    "see_also": [
+      "OAuth",
+      "SSO",
+      "JSON"
+    ]
+  },
+  {
+    "abbr": "OAuth",
+    "full": "Open Authorization",
+    "category": "Security",
+    "short": "A standard protocol for delegated access without sharing passwords.",
+    "description": "An open standard that lets a user grant a third-party application limited access to their resources on another service, without handing over their password.",
+    "example": "Clicking 'Sign in with Google' uses OAuth to authorize an app.",
+    "see_also": [
+      "SSO",
+      "JWT"
+    ]
+  },
+  {
+    "abbr": "SSO",
+    "full": "Single Sign-On",
+    "category": "Security",
+    "short": "Logging in once to access multiple independent systems.",
+    "description": "An authentication scheme that lets a user log in once and gain access to multiple related but independent applications without re-entering credentials.",
+    "example": "Logging into your company Google account also grants access to internal tools via SSO.",
+    "see_also": [
+      "OAuth",
+      "JWT"
+    ]
+  },
+  {
+    "abbr": "2FA",
+    "full": "Two-Factor Authentication",
+    "category": "Security",
+    "short": "Requiring a second proof of identity beyond a password.",
+    "description": "A security process requiring two different forms of identification to log in, typically something you know (password) plus something you have (a code or device).",
+    "example": "Entering a password plus a six-digit code from an authenticator app is 2FA.",
+    "see_also": [
+      "MFA",
+      "SSO"
+    ]
+  },
+  {
+    "abbr": "MFA",
+    "full": "Multi-Factor Authentication",
+    "category": "Security",
+    "short": "Requiring two or more independent proofs of identity to log in.",
+    "description": "An authentication method requiring two or more independent verification factors, generalizing 2FA to any number of factors.",
+    "example": "A bank might require a password, a code, and a fingerprint to log in.",
+    "see_also": [
+      "2FA",
+      "SSO"
+    ]
+  },
+  {
+    "abbr": "DDoS",
+    "full": "Distributed Denial of Service",
+    "category": "Security",
+    "short": "Overwhelming a service with traffic from many sources to take it offline.",
+    "description": "An attack where many compromised systems flood a target with traffic or requests, exhausting its resources and denying service to legitimate users.",
+    "example": "A botnet of thousands of infected devices floods a website until it crashes.",
+    "see_also": [
+      "CDN",
+      "VPN"
+    ]
+  },
+  {
+    "abbr": "VPN",
+    "full": "Virtual Private Network",
+    "category": "Security",
+    "short": "An encrypted tunnel that extends a private network across the internet.",
+    "description": "A technology that creates an encrypted connection over a public network, letting traffic appear to originate from a private network and hiding it from observers.",
+    "example": "Employees use a VPN to securely access internal company systems from home.",
+    "see_also": [
+      "TLS",
+      "DDoS"
+    ]
+  },
+  {
+    "abbr": "CVE",
+    "full": "Common Vulnerabilities and Exposures",
+    "category": "Security",
+    "short": "A public identifier for a specific known security vulnerability.",
+    "description": "A standardized, publicly disclosed identifier assigned to a specific software vulnerability, making it easy to reference across tools and advisories.",
+    "example": "CVE-2021-44228 identifies the Log4Shell vulnerability.",
+    "see_also": [
+      "CVSS"
+    ]
+  },
+  {
+    "abbr": "CVSS",
+    "full": "Common Vulnerability Scoring System",
+    "category": "Security",
+    "short": "A standardized numeric score for the severity of a vulnerability.",
+    "description": "A framework for rating the severity of security vulnerabilities on a 0-10 scale, based on factors like exploitability and impact.",
+    "example": "A CVSS score of 9.8 indicates a critical vulnerability.",
+    "see_also": [
+      "CVE"
+    ]
+  },
+  {
+    "abbr": "AI",
+    "full": "Artificial Intelligence",
+    "category": "AI/ML",
+    "short": "Computer systems performing tasks that normally require human intelligence.",
+    "description": "The broad field of building systems that can perform tasks associated with human intelligence, such as understanding language, recognizing images or making decisions.",
+    "example": "A chatbot that answers customer questions is an application of AI.",
+    "see_also": [
+      "ML",
+      "LLM",
+      "NLP"
+    ]
+  },
+  {
+    "abbr": "ML",
+    "full": "Machine Learning",
+    "category": "AI/ML",
+    "short": "Systems that learn patterns from data instead of following fixed rules.",
+    "description": "A subfield of AI where models learn to make predictions or decisions by finding patterns in data, rather than being explicitly programmed with rules.",
+    "example": "A spam filter trained on labeled emails is a machine learning model.",
+    "see_also": [
+      "AI",
+      "LLM",
+      "NLP"
+    ]
+  },
+  {
+    "abbr": "LLM",
+    "full": "Large Language Model",
+    "category": "AI/ML",
+    "short": "A large neural network trained to understand and generate human language.",
+    "description": "A neural network, typically based on the transformer architecture and trained on massive text datasets, capable of understanding and generating human-like text.",
+    "example": "Claude and GPT are examples of LLMs.",
+    "see_also": [
+      "AI",
+      "ML",
+      "NLP",
+      "RAG"
+    ]
+  },
+  {
+    "abbr": "NLP",
+    "full": "Natural Language Processing",
+    "category": "AI/ML",
+    "short": "The field of getting computers to understand and generate human language.",
+    "description": "A branch of AI focused on enabling computers to process, understand and generate human language, including tasks like translation, sentiment analysis and summarization.",
+    "example": "Auto-translating a webpage relies on NLP techniques.",
+    "see_also": [
+      "AI",
+      "ML",
+      "LLM"
+    ]
+  },
+  {
+    "abbr": "RAG",
+    "full": "Retrieval-Augmented Generation",
+    "category": "AI/ML",
+    "short": "Improving LLM answers by retrieving relevant documents before generating a response.",
+    "description": "A technique where a language model's response is grounded by first retrieving relevant documents or data from an external source, reducing hallucination and adding up-to-date knowledge.",
+    "example": "A support bot searches a company's docs and feeds the results to an LLM before answering.",
+    "see_also": [
+      "LLM",
+      "AI"
+    ]
+  },
+  {
+    "abbr": "GPU",
+    "full": "Graphics Processing Unit",
+    "category": "Hardware",
+    "short": "A processor optimized for massively parallel computation.",
+    "description": "A specialized processor originally designed for rendering graphics, well suited to the parallel matrix math used in machine learning and increasingly used for AI training and inference.",
+    "example": "Training a large neural network is usually done on GPUs rather than CPUs.",
+    "see_also": [
+      "CPU",
+      "AI",
+      "ML"
+    ]
+  },
+  {
+    "abbr": "CPU",
+    "full": "Central Processing Unit",
+    "category": "Hardware",
+    "short": "The general-purpose processor that executes a computer's instructions.",
+    "description": "The primary component of a computer that carries out general-purpose instructions, handling logic, arithmetic and control flow for most software.",
+    "example": "Every laptop has a CPU, such as an Intel or Apple Silicon chip.",
+    "see_also": [
+      "GPU",
+      "RAM"
+    ]
+  },
+  {
+    "abbr": "RAM",
+    "full": "Random Access Memory",
+    "category": "Hardware",
+    "short": "A computer's fast, volatile working memory.",
+    "description": "Fast, temporary memory a computer uses to store data currently in use, which is cleared when power is lost, as opposed to persistent storage like an SSD.",
+    "example": "A laptop with 16GB of RAM can keep more programs open smoothly at once.",
+    "see_also": [
+      "CPU",
+      "SSD"
+    ]
+  },
+  {
+    "abbr": "SSD",
+    "full": "Solid-State Drive",
+    "category": "Hardware",
+    "short": "Fast, non-volatile storage with no moving parts.",
+    "description": "A storage device that uses flash memory instead of spinning disks, offering much faster read/write speeds and better durability than a traditional hard drive.",
+    "example": "Modern laptops use SSDs instead of spinning hard drives.",
+    "see_also": [
+      "RAM",
+      "HDD"
+    ]
+  },
+  {
+    "abbr": "HDD",
+    "full": "Hard Disk Drive",
+    "category": "Hardware",
+    "short": "Traditional storage using spinning magnetic disks.",
+    "description": "A data storage device that reads and writes data on spinning magnetic platters, slower than an SSD but historically cheaper per gigabyte.",
+    "example": "Older desktops and bulk storage servers often still use HDDs for capacity.",
+    "see_also": [
+      "SSD"
+    ]
+  },
+  {
+    "abbr": "OS",
+    "full": "Operating System",
+    "category": "Software",
+    "short": "The software that manages a computer's hardware and runs other programs.",
+    "description": "System software that manages computer hardware and software resources and provides common services for other programs to run on.",
+    "example": "Windows, macOS and Linux are all operating systems.",
+    "see_also": [
+      "CPU",
+      "RAM"
+    ]
+  },
+  {
+    "abbr": "REPL",
+    "full": "Read-Eval-Print Loop",
+    "category": "Software",
+    "short": "An interactive shell that evaluates code one expression at a time.",
+    "description": "An interactive programming environment that reads a single expression, evaluates it, prints the result, and loops, letting developers experiment quickly.",
+    "example": "Running 'python3' with no arguments drops you into a REPL.",
+    "see_also": [
+      "CLI",
+      "IDE"
+    ]
+  },
+  {
+    "abbr": "DRY",
+    "full": "Don't Repeat Yourself",
+    "category": "Software",
+    "short": "A principle against duplicating logic or knowledge in code.",
+    "description": "A software design principle stating that every piece of knowledge should have a single, unambiguous representation in a system, to avoid inconsistent duplicated logic.",
+    "example": "Extracting repeated validation logic into one shared function follows DRY.",
+    "see_also": [
+      "KISS",
+      "YAGNI"
+    ]
+  },
+  {
+    "abbr": "KISS",
+    "full": "Keep It Simple, Stupid",
+    "category": "Software",
+    "short": "A principle favoring the simplest solution that works.",
+    "description": "A design principle arguing that systems work best when kept simple, and that unnecessary complexity should be avoided.",
+    "example": "Choosing a plain function over a configurable plugin system for a one-off task follows KISS.",
+    "see_also": [
+      "DRY",
+      "YAGNI"
+    ]
+  },
+  {
+    "abbr": "YAGNI",
+    "full": "You Aren't Gonna Need It",
+    "category": "Software",
+    "short": "A principle against building functionality before it's actually needed.",
+    "description": "An extreme programming principle advising developers not to add functionality until it is actually required, to avoid wasted effort and unnecessary complexity.",
+    "example": "Skipping a plugin architecture for a feature nobody has asked for follows YAGNI.",
+    "see_also": [
+      "DRY",
+      "KISS",
+      "MVP"
+    ]
+  },
+  {
+    "abbr": "TDD",
+    "full": "Test-Driven Development",
+    "category": "Software",
+    "short": "Writing a failing test before writing the code that makes it pass.",
+    "description": "A development practice where a test is written first to define desired behavior, the developer writes the minimal code to pass it, then refactors.",
+    "example": "Writing a test for 'divide(4,2) == 2' before implementing the divide function.",
+    "see_also": [
+      "CI/CD",
+      "QA"
+    ]
+  },
+  {
+    "abbr": "QA",
+    "full": "Quality Assurance",
+    "category": "Software",
+    "short": "The discipline of verifying software meets quality standards.",
+    "description": "The processes and practices used to ensure software meets specified requirements and quality standards before release, including testing and review.",
+    "example": "A QA engineer writes test plans and files bugs before a release ships.",
+    "see_also": [
+      "TDD",
+      "CI/CD"
+    ]
+  },
+  {
+    "abbr": "P2P",
+    "full": "Peer-to-Peer",
+    "category": "Networking",
+    "short": "A network where participants communicate directly rather than through a central server.",
+    "description": "A decentralized network architecture where participants ('peers') share resources directly with each other instead of relying on a central server.",
+    "example": "BitTorrent distributes file chunks between peers rather than one central host.",
+    "see_also": [
+      "CDN"
+    ]
+  },
+  {
+    "abbr": "IoT",
+    "full": "Internet of Things",
+    "category": "Hardware",
+    "short": "Everyday physical devices connected to the internet.",
+    "description": "The network of physical devices — sensors, appliances, wearables — embedded with connectivity that lets them collect and exchange data over the internet.",
+    "example": "A smart thermostat that can be controlled from a phone app is an IoT device.",
+    "see_also": [
+      "API"
+    ]
+  },
+  {
+    "abbr": "abbr",
+    "full": "Tech Abbreviation Lookup Tool (this command)",
+    "category": "Meta",
+    "short": "This tool. Run 'abbr abbr' to see usage.",
+    "description": "A lightweight, dependency-free command-line tool for looking up tech industry abbreviations, man-page style. Run it with no arguments for a full table, or pass a term to see a detailed entry.",
+    "example": "abbr                    show the full table of all abbreviations\nabbr API                show the man-page-style entry for API\nabbr -c security        filter the table to one category\nabbr -s container       search abbreviations and descriptions for a keyword\nabbr -l                 list all categories with counts",
+    "see_also": []
+  },
+  {
+    "abbr": ".tar",
+    "full": "Tape Archive Files",
+    "category": "File System",
+    "short": "An archive file format that bundles multiple files into one, without compression by default.",
+    "description": "Originally designed for writing data to sequential tape backups, .tar archives combine many files and directories into a single file while preserving structure and permissions. It's often paired with compression, as in .tar.gz."
+  },
+  {
+    "abbr": "ABR",
+    "full": "Area Border Router",
+    "category": "Networking",
+    "short": "An OSPF router that connects two or more areas within a single autonomous system.",
+    "description": "In OSPF networking, an Area Border Router sits between the backbone area and one or more other areas, summarizing and forwarding routing information between them to keep the network hierarchical and scalable."
+  },
+  {
+    "abbr": "ACK",
+    "full": "Acknowledgement",
+    "category": "Networking",
+    "short": "A signal confirming that data was received successfully.",
+    "description": "An acknowledgement is a response sent back to confirm receipt of data, most notably the ACK flag in TCP's handshake and ongoing data transfer, which lets the sender know a segment arrived intact."
+  },
+  {
+    "abbr": "AD",
+    "full": "Administrative Distance",
+    "category": "Networking",
+    "short": "A value Cisco routers use to rank the trustworthiness of different routing sources.",
+    "description": "When a router learns the same route from multiple sources (e.g. static config vs. OSPF vs. BGP), Administrative Distance is the metric used to decide which one to trust - lower values are preferred, with a directly connected route (AD 0) trusted most."
+  },
+  {
+    "abbr": "AD DS",
+    "full": "Active Directory Domain Services",
+    "category": "MST",
+    "short": "The core Windows Server role that provides directory services for a domain.",
+    "description": "Active Directory Domain Services stores information about users, computers, groups and other objects in a domain, and handles authentication and authorization - it's the foundational role underlying most other Active Directory features."
+  },
+  {
+    "abbr": "ADAC",
+    "full": "Active Directory Administrative Center",
+    "category": "MST",
+    "short": "A modern GUI tool for managing Active Directory objects on Windows Server.",
+    "description": "The Active Directory Administrative Center is a graphical management console (introduced with Windows Server 2012) for administering users, groups, computers and other AD objects, and includes features like the Recycle Bin and PowerShell History Viewer."
+  },
+  {
+    "abbr": "ALU",
+    "full": "Arithmetic Logic Unit",
+    "category": "Terminology",
+    "short": "The part of a CPU that performs arithmetic and logic operations.",
+    "description": "The ALU is a digital circuit inside a processor that carries out operations like addition, subtraction, and bitwise logic (AND, OR, NOT), forming the computational core of the CPU."
+  },
+  {
+    "abbr": "APFS",
+    "full": "Apple File System",
+    "category": "File System",
+    "short": "Apple's modern file system for macOS, iOS and other Apple platforms.",
+    "description": "Introduced in 2017 to replace HFS+, APFS is optimized for flash/SSD storage and adds features like strong encryption, snapshots, and fast directory sizing and cloning."
+  },
+  {
+    "abbr": "APT",
+    "full": "Advanced Persistent Threat",
+    "category": "Terminology",
+    "short": "A stealthy, long-term, targeted cyberattack, usually by a well-resourced actor.",
+    "description": "An APT describes an intrusion where an attacker gains and maintains unauthorized access to a network over an extended period, typically to exfiltrate data, rather than causing immediate visible damage. APTs are often associated with nation-state or organized crime groups."
+  },
+  {
+    "abbr": "ARPANET",
+    "full": "Advanced Research Projects Agency Network",
+    "category": "Terminology",
+    "short": "The precursor network to the modern internet.",
+    "description": "Developed by the U.S. Department of Defense's ARPA in the late 1960s, ARPANET was the first network to use packet switching and TCP/IP-style protocols, laying the technical foundation for the internet."
+  },
+  {
+    "abbr": "ASAP",
+    "full": "Apologize, Sympathize, Accept responsibility, Prepare to take action",
+    "category": "Studies",
+    "short": "A conflict-resolution mnemonic: Apologize, Sympathize, Accept responsibility, Prepare to take action.",
+    "description": "Used in customer service and communication training, ASAP is a four-step framework for handling complaints or conflict: apologize for the situation, sympathize with the other person's frustration, accept responsibility where appropriate, and prepare a concrete plan to resolve it."
+  },
+  {
+    "abbr": "ASCII",
+    "full": "American Standard Code for Information Interchange",
+    "category": "Terminology",
+    "short": "A character encoding standard mapping text characters to numbers.",
+    "description": "ASCII assigns each letter, digit, and common symbol a 7-bit numeric code (0-127), making it possible to represent text consistently across different computers. It's the basis for later encodings like UTF-8, which extend it to support more characters."
+  },
+  {
+    "abbr": "ASIC",
+    "full": "Application-Specific Integrated Circuits",
+    "category": "Networking",
+    "short": "A chip custom-designed for one specific task rather than general-purpose computing.",
+    "description": "An Application-Specific Integrated Circuit is built for a single purpose - such as switching network traffic or mining cryptocurrency - trading the flexibility of a general-purpose CPU for much higher efficiency and speed at that one task."
+  },
+  {
+    "abbr": "AW",
+    "full": "Assessment week",
+    "category": "Studies",
+    "short": "A scheduled period set aside for exams or graded assessments in a study program.",
+    "description": "Assessment Week refers to a block of time in an academic calendar dedicated to exams, tests or submitted assignments rather than regular teaching."
+  },
+  {
+    "abbr": "BASIC",
+    "full": "Beginners' All-purpose Symbolic Instruction Code",
+    "category": "Terminology",
+    "short": "An early, beginner-friendly programming language.",
+    "description": "Developed in 1964, BASIC (Beginners' All-purpose Symbolic Instruction Code) was designed to make programming accessible to non-specialists and became hugely popular on early home computers, with dialects like Visual Basic still used today."
+  },
+  {
+    "abbr": "BDR",
+    "full": "Backup Designated Router",
+    "category": "Networking",
+    "short": "The backup router that takes over if the Designated Router fails in an OSPF network.",
+    "description": "In OSPF multi-access networks, the Backup Designated Router stands ready to become the DR if the current one goes down, reducing the disruption and reconvergence time of a DR failure."
+  },
+  {
+    "abbr": "BIOS",
+    "full": "Basic Input/Output System",
+    "category": "Terminology",
+    "short": "Firmware that initializes hardware and boots the operating system.",
+    "description": "Stored on a chip on the motherboard, the BIOS runs before the OS to test hardware (POST), initialize components, and hand off control to the bootloader. Modern systems mostly use UEFI, a more capable successor, though the term 'BIOS' is still used colloquially."
+  },
+  {
+    "abbr": "BMC",
+    "full": "Business Model Canvas",
+    "category": "Terminology",
+    "short": "A one-page strategic template for describing a business model.",
+    "description": "The Business Model Canvas is a visual chart with nine building blocks - including value propositions, customer segments, channels and revenue streams - used by teams to design, discuss, and pivot a business model."
+  },
+  {
+    "abbr": "BML",
+    "full": "Build Measure Learn",
+    "category": "Resource",
+    "short": "A core feedback loop in the Lean Startup methodology.",
+    "description": "Build-Measure-Learn describes an iterative cycle where a team builds a minimal version of an idea, measures how it performs against real users, and uses what they learn to decide whether to persevere or pivot."
+  },
+  {
+    "abbr": "ByoD",
+    "full": "Bring your own Device",
+    "category": "Terminology",
+    "short": "Employees using their own personal devices to access company systems.",
+    "description": "Bring Your Own Device is a policy allowing staff to use personal laptops, phones or tablets for work, trading convenience and cost savings against the added challenge of securing company data on devices IT doesn't fully control."
+  },
+  {
+    "abbr": "CAN",
+    "full": "Campus Area Network",
+    "category": "Terminology",
+    "short": "A network spanning a group of buildings, such as a university campus.",
+    "description": "A CAN interconnects LANs across nearby buildings owned by one organization - larger than a single-building LAN but smaller and typically privately owned compared to a citywide MAN."
+  },
+  {
+    "abbr": "CCFL",
+    "full": "Cold Cathode Fluorescent Light",
+    "category": "Terminology",
+    "short": "An older backlight technology used in LCD screens before LEDs.",
+    "description": "CCFL tubes were used to illuminate LCD panels from behind before being largely replaced by LED backlighting, which is thinner, more power-efficient, and doesn't rely on mercury vapor."
+  },
+  {
+    "abbr": "CDMA",
+    "full": "Code Division Multiple Access",
+    "category": "Terminology",
+    "short": "A mobile network multiple-access technique that lets many devices share a channel using unique codes.",
+    "description": "Code Division Multiple Access lets multiple users transmit simultaneously on the same frequency by encoding each transmission with a distinct code, historically used in 2G/3G mobile networks (e.g. by Verizon and Sprint) as an alternative to GSM."
+  },
+  {
+    "abbr": "CFO",
+    "full": "Chief Financial Officer",
+    "category": "Terminology",
+    "short": "The senior executive responsible for a company's finances.",
+    "description": "The Chief Financial Officer oversees financial planning, reporting, risk management and financial strategy, typically reporting to the CEO."
+  },
+  {
+    "abbr": "CIDR",
+    "full": "Classless Interdomain Routing",
+    "category": "Networking",
+    "short": "A method for allocating IP addresses and routing more efficiently than old class-based addressing.",
+    "description": "Classless Inter-Domain Routing replaced the rigid class A/B/C address system with variable-length subnet masks (written like 192.168.1.0/24), allowing networks to be sized more precisely and routes to be aggregated, which slowed the exhaustion of IPv4 addresses."
+  },
+  {
+    "abbr": "CISO",
+    "full": "Chief Information Security Officer",
+    "category": "Terminology",
+    "short": "The senior executive responsible for an organization's information security.",
+    "description": "The Chief Information Security Officer sets security strategy, policy and risk management for an organization's data and systems, and typically leads incident response."
+  },
+  {
+    "abbr": "CMOS",
+    "full": "Complementary Metal-Oxide-Semiconductor",
+    "category": "Terminology",
+    "short": "A low-power semiconductor technology, and the small battery-backed memory that stores BIOS settings.",
+    "description": "Complementary Metal-Oxide-Semiconductor is both a widely used chip manufacturing technology and, colloquially, the small battery-powered memory chip on a motherboard that retains BIOS/UEFI settings and the system clock when the PC is powered off."
+  },
+  {
+    "abbr": "CNSS",
+    "full": "Committee on National Security Systems",
+    "category": "Resource",
+    "short": "A U.S. government body that sets policy for securing national security systems.",
+    "description": "The Committee on National Security Systems sets information assurance policies and standards for U.S. government systems handling national security information, and publishes widely referenced glossaries of information security terms."
+  },
+  {
+    "abbr": "COA",
+    "full": "Certificate of Authentication",
+    "category": "MST",
+    "short": "A label or code used to verify that a product license is genuine.",
+    "description": "A Certificate of Authentication is typically a physical or digital marker - such as a product key sticker - used to prove a piece of software or hardware is a legitimately licensed copy rather than counterfeit or pirated."
+  },
+  {
+    "abbr": "CRM",
+    "full": "Customer Relationship Management",
+    "category": "Exam EP1",
+    "short": "Software for managing a company's interactions and relationships with customers.",
+    "description": "Customer Relationship Management systems track customer contacts, sales pipelines, support interactions and marketing engagement in one place, helping businesses organize and analyze relationships throughout the customer lifecycle."
+  },
+  {
+    "abbr": "CU",
+    "full": "Control Unit",
+    "category": "Terminology",
+    "short": "The part of a CPU that directs the operation of the processor.",
+    "description": "The Control Unit fetches, decodes and coordinates the execution of instructions, directing data between the ALU, registers and memory, without performing the calculations itself."
+  },
+  {
+    "abbr": "DDR",
+    "full": "Double Data Rate",
+    "category": "Terminology",
+    "short": "A RAM technology that transfers data on both edges of the clock signal.",
+    "description": "DDR SDRAM doubles memory bandwidth compared to older single data rate RAM by transferring data on both the rising and falling edge of the clock cycle. Current generations include DDR4 and DDR5."
+  },
+  {
+    "abbr": "DHCP",
+    "full": "Dynamic Host Configuration Protocol",
+    "category": "Protocol",
+    "short": "The protocol that automatically assigns IP addresses and network settings to devices.",
+    "description": "Dynamic Host Configuration Protocol lets a server hand out IP addresses, subnet masks, gateways and DNS servers to devices as they join a network, removing the need to configure each device's network settings manually."
+  },
+  {
+    "abbr": "DPI",
+    "full": "Deep Packet Inspection",
+    "category": "Terminology",
+    "short": "Examining the actual data (payload) inside network packets, not just their headers.",
+    "description": "Unlike basic packet filtering, which only checks header information like source/destination address, DPI inspects the content of network traffic, letting firewalls, ISPs or monitoring tools identify applications, enforce policy, or detect threats - but also raising privacy concerns."
+  },
+  {
+    "abbr": "DR",
+    "full": "Designated Router",
+    "category": "Networking",
+    "short": "The router elected to represent a multi-access network segment in OSPF.",
+    "description": "On broadcast networks like Ethernet, OSPF elects one Designated Router to reduce the number of adjacencies routers must maintain with each other, with all other routers exchanging routing info through it instead of directly with every peer."
+  },
+  {
+    "abbr": "DRAM",
+    "full": "Dynamic Random-Access Memory",
+    "category": "Terminology",
+    "short": "The common, low-cost type of RAM used as main memory in most computers.",
+    "description": "Dynamic Random-Access Memory stores each bit in a capacitor that leaks charge and must be refreshed thousands of times per second, making it cheaper and denser than SRAM but slower."
+  },
+  {
+    "abbr": "DSRM",
+    "full": "Directory Services Restore Mode",
+    "category": "MST",
+    "short": "A special Windows recovery mode for repairing a domain controller's Active Directory database.",
+    "description": "Directory Services Restore Mode is a safe-mode-like boot option for domain controllers that takes AD DS offline, allowing administrators to restore from backup or repair a corrupted Active Directory database."
+  },
+  {
+    "abbr": "e.g.",
+    "full": "Exempli gratia (eng: for example)",
+    "category": "Lingo",
+    "short": "Latin abbreviation introducing an example.",
+    "description": "'e.g.' (from the Latin exempli gratia, 'for example') is used to introduce one or more illustrative examples of a broader statement, without implying the list is exhaustive - not to be confused with 'i.e.', which restates or clarifies rather than gives examples."
+  },
+  {
+    "abbr": "EAP-TLS",
+    "full": "Extensible Authentication Protocol-Transport Layer Security Protocol",
+    "category": "Protocol",
+    "short": "A highly secure wireless/network authentication method using digital certificates instead of passwords.",
+    "description": "Extensible Authentication Protocol-Transport Layer Security authenticates both the client and server using certificates rather than a shared password, making it one of the strongest EAP methods used in enterprise Wi-Fi (802.1X) authentication."
+  },
+  {
+    "abbr": "EEPROM",
+    "full": "Electrically Erasable Programmable Read-Only Memory",
+    "category": "Terminology",
+    "short": "A type of non-volatile memory chip that can be erased and reprogrammed electrically.",
+    "description": "Electrically Erasable Programmable Read-Only Memory retains data without power and can be rewritten in place (often byte by byte) using electrical signals, commonly used to store firmware such as BIOS settings."
+  },
+  {
+    "abbr": "EHCI",
+    "full": "Enhanced Host Controller Interface",
+    "category": "Linux",
+    "short": "The USB host controller interface standard for USB 2.0 devices.",
+    "description": "Enhanced Host Controller Interface defines how a computer's USB 2.0 controller hardware is accessed by the operating system, enabling High-Speed (480 Mbps) USB 2.0 transfers."
+  },
+  {
+    "abbr": "ERP",
+    "full": "Enterprise Resource Planning",
+    "category": "Terminology",
+    "short": "Integrated software that manages a company's core business processes in one system.",
+    "description": "Enterprise Resource Planning software combines functions like finance, HR, inventory, manufacturing and procurement into a single connected system, replacing separate disconnected tools with shared data and workflows."
+  },
+  {
+    "abbr": "ext",
+    "full": "Extended File System",
+    "category": "File System",
+    "short": "The family of native Linux file systems (ext2, ext3, ext4).",
+    "description": "ext and its successors are the default file systems used by most Linux distributions, with ext4 - the current standard - adding journaling, larger volume/file size limits and better performance over its predecessors."
+  },
+  {
+    "abbr": "FAT",
+    "full": "File Allocation Table",
+    "category": "File System",
+    "short": "An old, simple file system still used for compatibility on removable media.",
+    "description": "Originally developed for MS-DOS, FAT organizes a disk using a table that tracks which clusters belong to each file. It has no journaling or permissions but remains widely supported, which is why USB drives and SD cards often still ship formatted as FAT32."
+  },
+  {
+    "abbr": "FDDI",
+    "full": "Fiber Distributed Data Interface",
+    "category": "Networking",
+    "short": "An older high-speed fiber-optic network standard using a dual-ring topology.",
+    "description": "Fiber Distributed Data Interface was a 100 Mbps token-passing network standard from the 1980s/90s, using a dual counter-rotating ring for fault tolerance, largely obsolete today but historically important as an early fiber LAN/MAN backbone technology."
+  },
+  {
+    "abbr": "FHS",
+    "full": "File System Hierarchy Standard",
+    "category": "Terminology",
+    "short": "The standard that defines the directory layout of Linux and Unix-like systems.",
+    "description": "The Filesystem Hierarchy Standard specifies the purpose of top-level directories like /etc, /home, /var and /usr, so software and administrators can rely on a consistent layout across distributions."
+  },
+  {
+    "abbr": "FQDN",
+    "full": "Fully Qualified Domain Name",
+    "category": "MST",
+    "short": "A domain name that specifies a host's exact position in the DNS hierarchy, unambiguous and complete.",
+    "description": "A Fully Qualified Domain Name includes the hostname plus every parent domain up to the root, such as mail.example.com, uniquely identifying a specific host rather than a relative or partial name."
+  },
+  {
+    "abbr": "FTP",
+    "full": "File Transfer Protocol",
+    "category": "Protocol",
+    "short": "An old protocol for transferring files between a client and a server.",
+    "description": "File Transfer Protocol allows uploading and downloading files over a network, but sends credentials and data unencrypted by default, which is why it's largely been replaced by secure alternatives like SFTP or FTPS."
+  },
+  {
+    "abbr": "FTTH",
+    "full": "Fiber to the Home",
+    "category": "Networking",
+    "short": "A fiber-optic internet connection run directly into a home.",
+    "description": "Fiber to the Home extends fiber-optic cable all the way to an individual residence, offering much higher and more symmetric bandwidth than connections that rely on copper for the final stretch."
+  },
+  {
+    "abbr": "FTTP",
+    "full": "Fiber to the Premises",
+    "category": "Networking",
+    "short": "A fiber-optic connection run directly to a building or premises.",
+    "description": "Fiber to the Premises is a broader term than FTTH, covering fiber run to any building - residential or business - rather than copper for the last leg of the connection."
+  },
+  {
+    "abbr": "FTTX",
+    "full": "Fiber to the X",
+    "category": "Networking",
+    "short": "An umbrella term for any 'fiber to the ___' broadband deployment.",
+    "description": "FTTx is a general label covering the various points fiber can be extended to in a network - home (FTTH), premises (FTTP), curb (FTTC), node (FTTN) - with the remaining distance typically covered by existing copper or coax."
+  },
+  {
+    "abbr": "FUD",
+    "full": "Fear Uncertainty and Doubt",
+    "category": "Terminology",
+    "short": "Spreading fear, uncertainty and doubt to influence perception, often for competitive gain.",
+    "description": "A tactic - often used in marketing, sales or disinformation - of exaggerating risks or ambiguity about a competitor's product or a technology to discourage people from adopting it."
+  },
+  {
+    "abbr": "GSM",
+    "full": "Global System for Mobile communications",
+    "category": "Terminology",
+    "short": "A standard for second-generation (2G) digital mobile phone networks.",
+    "description": "The Global System for Mobile Communications was the dominant 2G cellular standard worldwide, introducing digital voice, SMS text messaging and international roaming before being succeeded by 3G/4G/5G technologies."
+  },
+  {
+    "abbr": "HCI",
+    "full": "Hyperconverged Infrastructure",
+    "category": "Terminology",
+    "short": "A data center architecture that combines compute, storage and networking into a single software-defined system.",
+    "description": "HCI bundles virtualized compute, storage and networking - traditionally separate hardware silos - into one integrated, often commodity-hardware-based platform managed through unified software, simplifying deployment and scaling."
+  },
+  {
+    "abbr": "HFS",
+    "full": "Hierarchical File System",
+    "category": "File System",
+    "short": "Apple's older Mac file system, superseded by HFS+ and then APFS.",
+    "description": "Introduced in 1985 for classic Mac OS, HFS organizes files in a tree of nested folders. It was replaced by HFS+ in 1998 and later by APFS in 2017."
+  },
+  {
+    "abbr": "HRG",
+    "full": "Harvard Referencing Guide",
+    "category": "Resource",
+    "short": "A citation style guide used for referencing academic sources.",
+    "description": "The Harvard Referencing Guide describes the widely used author-date citation style (e.g. 'Smith, 2024') for crediting sources in academic writing, commonly required in coursework and research papers."
+  },
+  {
+    "abbr": "HaaS",
+    "full": "Hardware as a Service",
+    "category": "Terminology",
+    "short": "Renting physical hardware as a subscription service instead of buying it outright.",
+    "description": "Hardware as a Service lets organizations pay for servers, networking gear or devices on a subscription basis, with the provider handling procurement, maintenance and often replacement, similar in spirit to SaaS but for physical equipment."
+  },
+  {
+    "abbr": "i.e.",
+    "full": "Id est (eng: in other words)",
+    "category": "Lingo",
+    "short": "Latin abbreviation meaning 'in other words,' used to clarify or restate.",
+    "description": "'i.e.' (from the Latin id est, 'that is') introduces a clarification or restatement of what was just said, narrowing to exactly what's meant - unlike 'e.g.', which introduces non-exhaustive examples."
+  },
+  {
+    "abbr": "I/O",
+    "full": "Input / Output",
+    "category": "Terminology",
+    "short": "The communication between a computer and the outside world (or between components).",
+    "description": "Input/Output refers to any operation that moves data into a system (input, e.g. keyboard, network) or out of it (output, e.g. display, disk write), and is a fundamental concept in both hardware design and programming."
+  },
+  {
+    "abbr": "IAM",
+    "full": "Identity & Access Management",
+    "category": "Terminology",
+    "short": "The systems and policies for managing digital identities and their access rights.",
+    "description": "Identity & Access Management covers how organizations create, authenticate and authorize user accounts, controlling who can access which resources - a foundational discipline in cybersecurity and cloud administration."
+  },
+  {
+    "abbr": "IC",
+    "full": "Introduction Course",
+    "category": "Studies",
+    "short": "An introductory course that orients students at the start of a study program.",
+    "description": "An Introduction Course typically covers foundational concepts, expectations and tools before a student moves on to more specialized coursework."
+  },
+  {
+    "abbr": "ICANN",
+    "full": "The Internet Corporation of Assigned Names and Numbers",
+    "category": "Resource",
+    "short": "The nonprofit organization that coordinates the internet's domain name and addressing systems.",
+    "description": "The Internet Corporation for Assigned Names and Numbers oversees the global domain name system, IP address allocation and root server system, helping ensure the internet's naming and numbering stays unique and functional worldwide."
+  },
+  {
+    "abbr": "ICH",
+    "full": "I/O Controller Hub",
+    "category": "Terminology",
+    "short": "A motherboard chipset component that manages I/O devices and peripherals.",
+    "description": "Part of Intel's traditional two-chip (northbridge/southbridge) chipset design, the ICH handled lower-speed I/O such as USB, audio, and storage controllers, communicating with the northbridge/memory controller hub."
+  },
+  {
+    "abbr": "ICT",
+    "full": "Information and Communications Technology",
+    "category": "Terminology",
+    "short": "A broad umbrella term for technology used to handle information and communication.",
+    "description": "Information and Communications Technology covers computing, telecommunications and related infrastructure and services collectively - a term often used in education, government and international development contexts as a broader synonym for IT."
+  },
+  {
+    "abbr": "IEEE",
+    "full": "Institute of Electrical and Electronics Engineers",
+    "category": "Resource",
+    "short": "A major professional organization that develops technical standards, including many networking standards.",
+    "description": "The Institute of Electrical and Electronics Engineers publishes influential technical standards - such as the 802.11 (Wi-Fi) and 802.3 (Ethernet) families - and is one of the largest professional associations for engineers worldwide."
+  },
+  {
+    "abbr": "IETF",
+    "full": "Internet Engineering Task Force",
+    "category": "Resource",
+    "short": "The organization that develops and maintains internet technical standards, published as RFCs.",
+    "description": "The Internet Engineering Task Force is an open, volunteer-driven standards body responsible for protocols like TCP/IP, HTTP and TLS, publishing its specifications as Request for Comments (RFC) documents."
+  },
+  {
+    "abbr": "IIS",
+    "full": "Internet Information Server",
+    "category": "Terminology",
+    "short": "Microsoft's web server software for Windows Server.",
+    "description": "Internet Information Services (commonly written IIS) is Microsoft's web server platform, used to host websites, web applications and services such as FTP, tightly integrated with Windows Server and .NET."
+  },
+  {
+    "abbr": "IOS",
+    "full": "Internetwork Operating System",
+    "category": "Cisco Terminology",
+    "short": "The operating system that runs on most Cisco networking devices.",
+    "description": "Cisco's Internetwork Operating System provides the command-line interface and control-plane software used to configure and manage Cisco routers and switches - not to be confused with Apple's mobile iOS."
+  },
+  {
+    "abbr": "IRTF",
+    "full": "Internet Research Task Force",
+    "category": "Resource",
+    "short": "A research-focused sister organization to the IETF, exploring longer-term internet topics.",
+    "description": "The Internet Research Task Force conducts longer-term research into internet protocols, applications and technology, complementing the IETF's focus on near-term engineering and standardization."
+  },
+  {
+    "abbr": "IT",
+    "full": "Information Technology",
+    "category": "Terminology",
+    "short": "The use of computers and systems to store, process and communicate information.",
+    "description": "Information Technology broadly covers the hardware, software, networks and personnel involved in managing an organization's computing systems and data - one of the most common umbrella terms in the industry."
+  },
+  {
+    "abbr": "JBOD",
+    "full": "Just a bunch of disks",
+    "category": "Terminology",
+    "short": "Multiple physical disks combined into one logical volume, with no redundancy.",
+    "description": "Just a Bunch Of Disks concatenates several drives into a single larger volume without the striping or mirroring used in RAID, meaning it offers extra capacity but no protection against drive failure."
+  },
+  {
+    "abbr": "KCC",
+    "full": "Knowledge Consistency Checker",
+    "category": "MST",
+    "short": "A Windows service that automatically builds and manages replication topology between domain controllers.",
+    "description": "The Knowledge Consistency Checker runs on each domain controller to automatically calculate the most efficient connections for replicating Active Directory data across sites, so administrators don't have to configure replication topology by hand."
+  },
+  {
+    "abbr": "KMS",
+    "full": "Key Management Service",
+    "category": "MST",
+    "short": "A Windows Server role for activating many machines from a central on-premises server.",
+    "description": "Key Management Service lets organizations activate large numbers of Windows and Office installations against a local server rather than each machine contacting Microsoft individually, simplifying volume licensing activation."
+  },
+  {
+    "abbr": "L2TP",
+    "full": "Layer 2 Tunneling Protocol",
+    "category": "Protocol",
+    "short": "A VPN tunneling protocol, usually paired with IPsec for encryption.",
+    "description": "Layer 2 Tunneling Protocol creates a tunnel to carry network traffic between two points but provides no encryption on its own, so it's almost always combined with IPsec (as L2TP/IPsec) to secure the data."
+  },
+  {
+    "abbr": "LAN",
+    "full": "Local Area Network",
+    "category": "Terminology",
+    "short": "A network confined to a small area, like a home or office.",
+    "description": "A Local Area Network connects devices within a limited physical area using switches and often Wi-Fi, providing high-speed, low-latency connectivity compared to networks spanning larger geographic distances (like a WAN)."
+  },
+  {
+    "abbr": "LEAP",
+    "full": "Lightweight Extensible Authentication Protocol",
+    "category": "Protocol",
+    "short": "An older, Cisco-proprietary wireless authentication protocol, now considered insecure.",
+    "description": "Lightweight Extensible Authentication Protocol was Cisco's early EAP method for Wi-Fi authentication, but weaknesses in its design made it vulnerable to offline password-cracking attacks, and it has largely been replaced by stronger methods like PEAP and EAP-TLS."
+  },
+  {
+    "abbr": "LMS",
+    "full": "Learning Management System (Moodle)",
+    "category": "Studies",
+    "short": "Software platform used to deliver, track and manage online or blended learning, e.g. Moodle.",
+    "description": "A Learning Management System hosts course materials, assignments, grades and communication between students and instructors, with Moodle and Canvas being common examples in education."
+  },
+  {
+    "abbr": "LSA",
+    "full": "Link-State Advertisement / Local Security Authority",
+    "category": "Networking",
+    "short": "Networking: Link-State Advertisement. Windows: Local Security Authority.",
+    "description": "LSA is ambiguous. In OSPF networking it means Link-State Advertisement, a packet routers exchange to describe their links and build a shared view of network topology. In Windows administration it instead means Local Security Authority, the subsystem that enforces local security policy and handles logon authentication."
+  },
+  {
+    "abbr": "LTSC",
+    "full": "Long-Term Servicing Channel",
+    "category": "MST",
+    "short": "A Windows release channel focused on stability, receiving security updates but few new features.",
+    "description": "The Long-Term Servicing Channel is intended for specialized, unchanging environments - like medical or industrial control systems - that need years of stability without the disruption of frequent feature updates common to the standard Windows channel."
+  },
+  {
+    "abbr": "MAK",
+    "full": "Volume Multiple Activation Key",
+    "category": "MST",
+    "short": "A type of Windows/Office volume license key that activates directly with Microsoft, with a limited activation count.",
+    "description": "A Multiple Activation Key allows a set number of installations to activate individually over the internet or phone directly against Microsoft's servers, as opposed to KMS, which activates through a local on-premises server."
+  },
+  {
+    "abbr": "MAN",
+    "full": "Metropolitan Area Network",
+    "category": "Terminology",
+    "short": "A network spanning a city or large campus, bigger than a LAN but smaller than a WAN.",
+    "description": "A Metropolitan Area Network interconnects multiple LANs across a city or metropolitan region, historically used by municipalities, universities or ISPs to link sites without renting long-distance WAN links."
+  },
+  {
+    "abbr": "MCI",
+    "full": "Memory Controller Hub",
+    "category": "Terminology",
+    "short": "The chipset component that manages communication between the CPU, RAM and graphics.",
+    "description": "Traditionally called the northbridge, the Memory Controller Hub handled high-speed connections between the processor, main memory and (historically) the graphics card, before this function was largely integrated directly into modern CPUs."
+  },
+  {
+    "abbr": "MMF",
+    "full": "Multi Mode Fiber",
+    "category": "Terminology",
+    "short": "A type of fiber-optic cable optimized for shorter distances.",
+    "description": "Multi-mode fiber has a larger core than single-mode fiber, allowing light to travel via multiple paths (modes). This makes it cheaper and easier to work with over short runs, like within a data center, but subject to more signal dispersion over long distances."
+  },
+  {
+    "abbr": "MMU",
+    "full": "Memory Management Unit",
+    "category": "Terminology",
+    "short": "The hardware that translates virtual memory addresses into physical ones.",
+    "description": "The Memory Management Unit sits between the CPU and RAM, translating the virtual addresses used by programs into actual physical memory addresses, and enforcing memory protection between processes."
+  },
+  {
+    "abbr": "MOBO",
+    "full": "Motherboard",
+    "category": "Terminology",
+    "short": "Slang for motherboard, the main circuit board of a computer.",
+    "description": "The motherboard houses the CPU socket, RAM slots, chipset and expansion slots, and provides the connections that tie all of a computer's components together."
+  },
+  {
+    "abbr": "MOS",
+    "full": "Mainframe Operating System",
+    "category": "Terminology",
+    "short": "An operating system designed to run on large-scale mainframe computers.",
+    "description": "Mainframe operating systems are built for the high-throughput, high-reliability transaction processing mainframes are used for, such as banking and airline reservation systems, and prioritize uptime and backward compatibility over general-purpose flexibility."
+  },
+  {
+    "abbr": "MTU",
+    "full": "Maximum Transmission Unit",
+    "category": "Networking",
+    "short": "The largest packet size a network link can carry without fragmenting it.",
+    "description": "Maximum Transmission Unit defines the biggest amount of data, in bytes, that can be sent in a single network layer packet over a given link (commonly 1500 bytes on Ethernet); larger packets must be fragmented, which can hurt performance."
+  },
+  {
+    "abbr": "MU-MIMO",
+    "full": "Multiple User, Multiple Input, Multiple Output",
+    "category": "Terminology",
+    "short": "A Wi-Fi technology letting a router communicate with multiple devices simultaneously.",
+    "description": "Multi-User, Multiple Input, Multiple Output allows a wireless access point to send separate data streams to several client devices at the same time using multiple antennas, instead of serving devices one at a time, improving overall network efficiency."
+  },
+  {
+    "abbr": "NAS",
+    "full": "Network Attached Storage",
+    "category": "Terminology",
+    "short": "A dedicated storage device connected to a network and shared by multiple users.",
+    "description": "Network Attached Storage is a purpose-built file server - often a small standalone appliance - that provides centralized file storage accessible over the network, commonly used for backups, media libraries and shared drives."
+  },
+  {
+    "abbr": "NAT",
+    "full": "Network Address Translation",
+    "category": "Networking",
+    "short": "Translating private IP addresses to a public one so multiple devices can share one internet connection.",
+    "description": "Network Address Translation lets a router rewrite the source/destination addresses of packets as they cross between a private network and the public internet, conserving scarce public IPv4 addresses and adding a layer of obscurity to internal network structure."
+  },
+  {
+    "abbr": "NBI",
+    "full": "Northbound Interfaces",
+    "category": "Terminology",
+    "short": "The APIs a system exposes upward to applications or management layers above it.",
+    "description": "In network architecture (e.g. SDN controllers), the northbound interface is what applications and orchestration tools use to talk to the controller, in contrast to the southbound interface, which talks down to the network devices themselves."
+  },
+  {
+    "abbr": "NIC",
+    "full": "Network Interface Card",
+    "category": "Terminology",
+    "short": "The hardware component that connects a computer to a network.",
+    "description": "A Network Interface Card (or built-in network adapter) provides the physical connection - wired or wireless - between a device and a network, with each NIC assigned a unique MAC address."
+  },
+  {
+    "abbr": "NIS",
+    "full": "Network and IT Security",
+    "category": "Studies",
+    "short": "A field/program of study covering the securing of networks and IT systems.",
+    "description": "Network and IT Security covers the principles and practices of protecting computer networks and systems from unauthorized access, misuse and attack - commonly the name of a specialized course or study track."
+  },
+  {
+    "abbr": "NIST",
+    "full": "National Institute of Standards and Technology",
+    "category": "Resource",
+    "short": "A U.S. agency that develops widely adopted technology and cybersecurity standards.",
+    "description": "The National Institute of Standards and Technology publishes influential frameworks and standards - including the NIST Cybersecurity Framework and cryptographic standards like AES - that are widely referenced far beyond U.S. government use."
+  },
+  {
+    "abbr": "NSA",
+    "full": "Network and Systems Administration",
+    "category": "Studies",
+    "short": "A field/program of study covering the administration of networks and computer systems.",
+    "description": "In an educational context, Network and Systems Administration refers to coursework covering how to install, configure, and maintain servers, networks and IT infrastructure - distinct from the U.S. National Security Agency, which shares the same abbreviation."
+  },
+  {
+    "abbr": "NTFS",
+    "full": "New Technology File System",
+    "category": "File System",
+    "short": "Microsoft's modern Windows file system.",
+    "description": "Introduced with Windows NT, NTFS supports journaling, file permissions (ACLs), encryption, compression and large volume/file sizes, and remains the default file system for Windows installations."
+  },
+  {
+    "abbr": "NTIA",
+    "full": "National Telecommunications and Information Administration",
+    "category": "Linux",
+    "short": "A U.S. federal agency that advises on telecommunications and internet policy.",
+    "description": "The National Telecommunications and Information Administration is part of the U.S. Department of Commerce and manages federal use of the radio spectrum while advising on domestic and international telecom and internet policy."
+  },
+  {
+    "abbr": "NTP",
+    "full": "Network Time Protocol",
+    "category": "Networking",
+    "short": "The protocol used to synchronize clocks across computers on a network.",
+    "description": "Network Time Protocol keeps devices' clocks accurate by synchronizing them against reference time servers, which matters for logging, authentication (like Kerberos) and coordinating distributed systems."
+  },
+  {
+    "abbr": "NVMe",
+    "full": "Non-Volatile Memory express",
+    "category": "Terminology",
+    "short": "A high-speed protocol for accessing flash storage over PCIe.",
+    "description": "Non-Volatile Memory Express is a modern storage interface designed for SSDs, connecting directly over the PCIe bus rather than through older SATA/AHCI interfaces, offering far higher throughput and lower latency."
+  },
+  {
+    "abbr": "ODD",
+    "full": "Optical Disk Drives",
+    "category": "Terminology",
+    "short": "A drive that reads and writes optical discs like CDs, DVDs or Blu-rays.",
+    "description": "Optical Disc Drives use a laser to read (and sometimes write) data stored on optical media, once standard in PCs but now largely phased out in favor of digital downloads and flash storage."
+  },
+  {
+    "abbr": "OEM",
+    "full": "Original Equipment Manufacturer",
+    "category": "MST",
+    "short": "A company that manufactures hardware or components sold/rebranded by another company.",
+    "description": "An Original Equipment Manufacturer makes products or parts that another company sells under its own brand - in software, 'OEM' licenses are also the lower-cost Windows licenses that come pre-installed by PC manufacturers, tied to that specific hardware."
+  },
+  {
+    "abbr": "OFDMA",
+    "full": "Orthogonal Frequency Division Multiple Access",
+    "category": "Terminology",
+    "short": "A technique that divides Wi-Fi/cellular channels into smaller sub-channels for multiple users at once.",
+    "description": "Orthogonal Frequency Division Multiple Access splits a wireless channel into many smaller frequency sub-channels that can be allocated to different users simultaneously, improving efficiency in crowded networks - a key feature of Wi-Fi 6 and modern cellular standards."
+  },
+  {
+    "abbr": "OHCI",
+    "full": "Open Host Controller Interface",
+    "category": "Linux",
+    "short": "An older USB host controller interface standard, mainly for USB 1.1.",
+    "description": "Open Host Controller Interface was one of two competing standards (alongside UHCI) for how USB 1.1 controllers communicate with the OS, before being succeeded by EHCI for USB 2.0 and xHCI for USB 3.x."
+  },
+  {
+    "abbr": "ONT",
+    "full": "Optical Network Terminal",
+    "category": "Networking",
+    "short": "The device at a customer's premises that converts a fiber signal into usable ethernet/Wi-Fi.",
+    "description": "An Optical Network Terminal (sometimes called an ONU) sits at the end of a fiber-optic connection, translating optical signals from the ISP into the electrical signals used by a router or directly providing routing/Wi-Fi itself."
+  },
+  {
+    "abbr": "OSA",
+    "full": "Online Service Activation",
+    "category": "MST",
+    "short": "A Microsoft licensing method that activates Windows over the internet using a product key.",
+    "description": "Online Service Activation validates a product key and activates Windows or another Microsoft product by contacting Microsoft's activation servers over the internet."
+  },
+  {
+    "abbr": "OSI",
+    "full": "Open Systems Interconnection",
+    "category": "Networking",
+    "short": "A 7-layer conceptual model describing how network communication functions.",
+    "description": "The Open Systems Interconnection model divides networking into seven layers - Physical, Data Link, Network, Transport, Session, Presentation and Application - used as a common reference for understanding and troubleshooting how protocols like TCP/IP fit together, even though real-world networking doesn't map onto it exactly."
+  },
+  {
+    "abbr": "OSINT",
+    "full": "Open-Source Intelligence",
+    "category": "Security",
+    "short": "Gathering intelligence from publicly available sources rather than covert means.",
+    "description": "Open-Source Intelligence involves collecting and analyzing information from public sources - websites, social media, public records, news - to support security research, investigations, or reconnaissance, without requiring access to private or classified data."
+  },
+  {
+    "abbr": "OSPF",
+    "full": "Open Shortest Path First",
+    "category": "Networking",
+    "short": "A widely used link-state routing protocol for finding the best path within a network.",
+    "description": "Open Shortest Path First is an interior gateway protocol where routers share information about their direct links to build a complete map of the network, then use Dijkstra's algorithm to calculate the shortest path to each destination."
+  },
+  {
+    "abbr": "PAN",
+    "full": "Personal Area Network",
+    "category": "Terminology",
+    "short": "A network for devices very close to one person, like Bluetooth accessories.",
+    "description": "A Personal Area Network connects devices within a very short range - typically a few meters - such as a phone, wireless earbuds and a smartwatch, commonly using Bluetooth."
+  },
+  {
+    "abbr": "PAT",
+    "full": "Port Address Translation",
+    "category": "Terminology",
+    "short": "A form of NAT that lets many devices share a single public IP address using different ports.",
+    "description": "Port Address Translation maps multiple internal private IP addresses to one public IP address by tracking connections using unique port numbers, which is how most home routers let many devices share a single internet connection."
+  },
+  {
+    "abbr": "PATA",
+    "full": "Parallel Advanced Technology Attachment",
+    "category": "Terminology",
+    "short": "An older parallel interface for connecting hard drives and optical drives.",
+    "description": "Parallel ATA (also known as IDE) was the standard drive interface before being replaced by the faster, thinner-cabled Serial ATA (SATA)."
+  },
+  {
+    "abbr": "PCI",
+    "full": "Peripheral Component Interconnect",
+    "category": "Terminology",
+    "short": "An older internal expansion bus standard for connecting hardware to a motherboard.",
+    "description": "Peripheral Component Interconnect was a parallel bus standard used to attach expansion cards - like sound or network cards - to a motherboard, before being succeeded by the faster serial PCI Express (PCIe)."
+  },
+  {
+    "abbr": "PCIe",
+    "full": "Peripheral Component Interconnect express",
+    "category": "Terminology",
+    "short": "The high-speed serial bus used to connect modern expansion cards, GPUs and SSDs.",
+    "description": "PCI Express is the current standard interface for connecting components like graphics cards, NVMe SSDs and network cards to a motherboard, offering much higher bandwidth than the older parallel PCI bus and scaling via multiple data 'lanes.'"
+  },
+  {
+    "abbr": "PDU",
+    "full": "Protocol Data Unit",
+    "category": "Networking",
+    "short": "A generic term for a unit of data transmitted at a given layer of a network protocol stack.",
+    "description": "A PDU is the general name for the data structure exchanged between peer layers in a network - for example a 'frame' at Layer 2, a 'packet' at Layer 3, and a 'segment' at Layer 4 are all specific types of PDU."
+  },
+  {
+    "abbr": "PEAP",
+    "full": "Protected Extensible Authentication Protocol",
+    "category": "Protocol",
+    "short": "A widely used wireless authentication method that wraps credentials in an encrypted TLS tunnel.",
+    "description": "Protected EAP first establishes a secure TLS tunnel (authenticating the server via certificate) and then sends the client's username/password through it, offering strong protection without requiring every client to have its own certificate, unlike EAP-TLS."
+  },
+  {
+    "abbr": "PGA",
+    "full": "Pin Grid Array",
+    "category": "Terminology",
+    "short": "A CPU packaging style where pins on the chip insert into holes in the socket.",
+    "description": "In a PGA package, the pins used to connect the processor to the motherboard are on the CPU itself, which inserts into a matching socket, as opposed to LGA packaging, where the pins are on the socket instead."
+  },
+  {
+    "abbr": "PLM",
+    "full": "Product Life-cycle Management",
+    "category": "Terminology",
+    "short": "Managing a product's data and processes across its entire lifecycle, from design to retirement.",
+    "description": "Product Lifecycle Management software and practices track a product from initial concept and design through manufacturing, service and eventual disposal, centralizing engineering and business data."
+  },
+  {
+    "abbr": "PO",
+    "full": "Provocative Operation",
+    "category": "Studies",
+    "short": "A brainstorming technique that uses a deliberately unreasonable statement to spark new ideas.",
+    "description": "Provocative Operation, part of Edward de Bono's lateral thinking methods, involves stating something impossible or absurd about a problem and then working backward from it to surface unconventional solutions."
+  },
+  {
+    "abbr": "POP3",
+    "full": "Post Office Protocol v.3",
+    "category": "Networking",
+    "short": "An email protocol that downloads messages from a server to a single device, typically removing them from the server.",
+    "description": "Post Office Protocol version 3 retrieves email from a mail server to a local client, traditionally downloading and deleting messages from the server (though 'leave a copy' options exist) - in contrast to IMAP, which keeps mail synced across multiple devices."
+  },
+  {
+    "abbr": "POST",
+    "full": "Power-On Self-Test",
+    "category": "Terminology",
+    "short": "The hardware self-check a computer runs immediately after powering on.",
+    "description": "The Power-On Self-Test is run by the BIOS/UEFI firmware at startup to verify core hardware - like RAM and the CPU - is working before handing control to the bootloader; failures are usually signaled with beep codes or error screens."
+  },
+  {
+    "abbr": "PPTP",
+    "full": "Point-to-Point Tunneling Protocol",
+    "category": "Protocol",
+    "short": "One of the earliest VPN protocols, now considered obsolete and insecure.",
+    "description": "Point-to-Point Tunneling Protocol was an early, easy-to-configure VPN standard, but its encryption has known serious vulnerabilities, so modern VPNs use stronger protocols like IKEv2, OpenVPN or WireGuard instead."
+  },
+  {
+    "abbr": "PXE",
+    "full": "Preboot Execution Environment",
+    "category": "Linux",
+    "short": "A way to boot a computer over the network instead of from a local disk.",
+    "description": "Preboot Execution Environment lets a computer's firmware fetch an operating system image or installer over the network (typically via DHCP and TFTP), commonly used for mass OS deployment and diskless workstations."
+  },
+  {
+    "abbr": "QAM",
+    "full": "Quadrature Amplitude Modulation",
+    "category": "Terminology",
+    "short": "A method of encoding digital data onto a radio or cable signal using both amplitude and phase.",
+    "description": "Quadrature Amplitude Modulation combines two carrier waves to encode more bits per signal change than simpler modulation schemes, and is widely used in Wi-Fi, cable internet and digital TV to pack more data into limited bandwidth."
+  },
+  {
+    "abbr": "QoS",
+    "full": "Quality of Service",
+    "category": "Terminology",
+    "short": "Prioritizing certain network traffic to keep latency-sensitive applications running smoothly.",
+    "description": "Quality of Service lets network devices prioritize some traffic over other traffic - for example prioritizing video calls over file downloads - to manage bandwidth, latency and packet loss for applications that need it most."
+  },
+  {
+    "abbr": "RAID",
+    "full": "Redundant Array of Independent Drives or Redundant Array of Inexpensive Disks",
+    "category": "Terminology",
+    "short": "Combining multiple physical drives into one logical unit for redundancy, performance, or both.",
+    "description": "Redundant Array of Independent (or Inexpensive) Disks spreads or duplicates data across multiple drives according to a chosen 'RAID level' (e.g. RAID 1 mirrors data for redundancy, RAID 0 stripes it for speed with no redundancy, RAID 5 balances both)."
+  },
+  {
+    "abbr": "RIP",
+    "full": "Routing Information Protocol",
+    "category": "Networking",
+    "short": "One of the oldest and simplest interior routing protocols, based on hop count.",
+    "description": "Routing Information Protocol picks routes based purely on the number of hops to a destination (max 15), making it simple to configure but slow to converge and poorly suited to large or complex networks compared to modern protocols like OSPF."
+  },
+  {
+    "abbr": "RJ",
+    "full": "Registered Jack",
+    "category": "Terminology",
+    "short": "A standardized connector type, most familiar as the plug on ethernet or phone cables.",
+    "description": "Registered Jack refers to a family of standardized telecommunication connectors; RJ45 is the 8-pin connector used for ethernet cables, while RJ11 is the smaller 4/6-pin connector used for telephone lines."
+  },
+  {
+    "abbr": "ROM",
+    "full": "Read-Only Memory",
+    "category": "Terminology",
+    "short": "Memory that permanently or semi-permanently stores data, retained without power.",
+    "description": "Read-Only Memory holds data that isn't meant to change during normal operation, such as firmware, and unlike RAM it retains its contents when powered off."
+  },
+  {
+    "abbr": "ROMMON",
+    "full": "Read Only Memory Monitor Mode",
+    "category": "Networking",
+    "short": "The low-level bootstrap environment on Cisco devices used for recovery and initial boot.",
+    "description": "ROM Monitor is a minimal command-line environment built into Cisco routers/switches, used before the full Cisco IOS loads - useful for password recovery, IOS reinstallation, and diagnosing boot failures."
+  },
+  {
+    "abbr": "RPM",
+    "full": "RPM Packet Manager",
+    "category": "Linux",
+    "short": "A package format and manager used by Red Hat-based Linux distributions.",
+    "description": "RPM (originally Red Hat Package Manager, now a recursive acronym) packages software along with metadata about dependencies and installation scripts, and is used by distributions like Fedora, RHEL and openSUSE - roughly the counterpart to Debian's .deb/APT."
+  },
+  {
+    "abbr": "RTOS",
+    "full": "Real-Time Operating Systems",
+    "category": "Terminology",
+    "short": "An operating system designed to guarantee responses within strict, predictable time limits.",
+    "description": "A Real-Time Operating System is built for applications - like industrial control, medical devices or automotive systems - where a task must complete within a guaranteed deadline, prioritizing predictability over general-purpose throughput."
+  },
+  {
+    "abbr": "SAC",
+    "full": "Semi-Annual Channel",
+    "category": "MST",
+    "short": "A Windows Server release channel with feature updates roughly twice a year.",
+    "description": "The Semi-Annual Channel was the standard Windows Server release cadence introducing new features roughly every six months, in contrast to LTSC (Long-Term Servicing Channel) editions, which prioritize stability over frequent updates. It has since been replaced by the Annual Channel."
+  },
+  {
+    "abbr": "SACK",
+    "full": "Selective acknowledgement",
+    "category": "Networking",
+    "short": "A TCP extension letting a receiver report exactly which data blocks it got, speeding up recovery from packet loss.",
+    "description": "Selective Acknowledgement improves on basic TCP acknowledgements - which can only confirm data up to the first gap - by letting the receiver tell the sender specifically which non-contiguous blocks arrived, so only the actually missing data needs to be retransmitted."
+  },
+  {
+    "abbr": "SAN",
+    "full": "Storage Area Networks",
+    "category": "Terminology",
+    "short": "A dedicated high-speed network that gives servers block-level access to shared storage.",
+    "description": "A Storage Area Network connects servers to pools of storage devices as if they were locally attached drives, typically over Fibre Channel or iSCSI, and is used in data centers to centralize and scale storage independently of any one server."
+  },
+  {
+    "abbr": "SAS",
+    "full": "Secure Attention Sequence",
+    "category": "MST",
+    "short": "The special key combination (Ctrl+Alt+Delete) that ensures you're talking to a trusted login screen.",
+    "description": "The Secure Attention Sequence is a keystroke combination - Ctrl+Alt+Delete on Windows - that cannot be intercepted by a regular application, guaranteeing the resulting login prompt comes from the trusted operating system rather than a spoofed one."
+  },
+  {
+    "abbr": "SATA",
+    "full": "Serial Advanced Technology Attachment",
+    "category": "Terminology",
+    "short": "The standard interface connecting hard drives and SSDs to a computer's motherboard.",
+    "description": "Serial ATA succeeded the older parallel ATA (PATA/IDE) standard, using a thinner cable and higher transfer speeds; it remains common for SSDs and HDDs, though it has been partly superseded by NVMe for high-performance flash storage."
+  },
+  {
+    "abbr": "SB",
+    "full": "System Board",
+    "category": "Terminology",
+    "short": "Another name for the motherboard, the main circuit board of a computer.",
+    "description": "The System Board (or motherboard) is the central printed circuit board connecting the CPU, memory, storage and expansion cards."
+  },
+  {
+    "abbr": "SBI",
+    "full": "Southbound Interfaces",
+    "category": "Terminology",
+    "short": "The interfaces a system uses to control or communicate with layers below it.",
+    "description": "In network architecture (e.g. SDN), the southbound interface is how a central controller communicates down to the actual switches and routers it manages, in contrast to the northbound interface used by applications above it."
+  },
+  {
+    "abbr": "SBOM",
+    "full": "Software Bill of Materials",
+    "category": "Linux",
+    "short": "A formal inventory of all the components and dependencies that make up a piece of software.",
+    "description": "A Software Bill of Materials lists every library, package and dependency used to build an application, similar to an ingredients list, helping organizations track vulnerabilities and license compliance across their software supply chain."
+  },
+  {
+    "abbr": "SCM",
+    "full": "Supply Chain Management",
+    "category": "Terminology",
+    "short": "Coordinating the flow of goods, information and finances from raw materials to the end customer.",
+    "description": "Supply Chain Management covers planning and controlling the movement of materials and products through sourcing, manufacturing, logistics and delivery, aiming to reduce cost and improve reliability across the whole chain."
+  },
+  {
+    "abbr": "SDN",
+    "full": "Software Defined Networking",
+    "category": "MST",
+    "short": "Managing networks through centralized software instead of configuring each device by hand.",
+    "description": "Software-Defined Networking separates the network's control logic (deciding how traffic should flow) from the underlying hardware (which just forwards packets), centralizing management in software - Windows Server includes SDN capabilities for virtualized datacenter networking."
+  },
+  {
+    "abbr": "SDRAM",
+    "full": "Synchronous Data Random-Access Memory",
+    "category": "Terminology",
+    "short": "RAM synchronized to the system clock, the foundation of modern DDR memory.",
+    "description": "Synchronous Dynamic RAM coordinates its operations with the CPU's clock signal, unlike older asynchronous DRAM, allowing faster and more predictable timing - all modern DDR memory generations are types of SDRAM."
+  },
+  {
+    "abbr": "SLP",
+    "full": "System Locked Pre-Installation",
+    "category": "MST",
+    "short": "An OEM Windows activation method tied to hardware identifiers baked in by the manufacturer.",
+    "description": "System Locked Pre-Installation lets PC manufacturers pre-activate Windows at the factory by embedding license information in the BIOS/firmware, so the installed copy activates automatically on that specific hardware without contacting Microsoft."
+  },
+  {
+    "abbr": "SMB",
+    "full": "Server Message Block",
+    "category": "Terminology",
+    "short": "A network protocol used mainly by Windows for sharing files, printers and other resources.",
+    "description": "Server Message Block lets clients read and write files, and access shared printers and other resources, on a remote server or another computer over a network - it's the protocol underlying Windows file sharing."
+  },
+  {
+    "abbr": "SMF",
+    "full": "Single Mode Fiber",
+    "category": "Terminology",
+    "short": "A type of fiber-optic cable optimized for very long distances.",
+    "description": "Single-mode fiber has a very narrow core so light travels in essentially one path (mode), minimizing signal dispersion and allowing data to travel much farther than multi-mode fiber, at a higher equipment cost."
+  },
+  {
+    "abbr": "SMTP",
+    "full": "Simple Mail Transfer Protocol",
+    "category": "Protocol",
+    "short": "The protocol used to send email between mail servers.",
+    "description": "Simple Mail Transfer Protocol handles the sending and relaying of outgoing email; retrieving mail from a mailbox is instead handled by protocols like IMAP or POP3."
+  },
+  {
+    "abbr": "SPDX",
+    "full": "Software Package Data Exchange",
+    "category": "Linux",
+    "short": "A standard format for documenting software licenses and components.",
+    "description": "Software Package Data Exchange is an open standard for communicating a software package's components, licenses and origins in a machine-readable way, often used to produce or exchange SBOMs."
+  },
+  {
+    "abbr": "SRAM",
+    "full": "Static Random-Access Memory",
+    "category": "Terminology",
+    "short": "A faster, more expensive type of RAM used for CPU caches.",
+    "description": "Static RAM stores each bit using a flip-flop circuit rather than a capacitor, so it doesn't need constant refreshing like DRAM, making it faster but more expensive and less dense - which is why it's used for small, fast CPU caches rather than main memory."
+  },
+  {
+    "abbr": "SSH",
+    "full": "Secure Shell",
+    "category": "Protocol",
+    "short": "An encrypted protocol for securely accessing and managing remote computers.",
+    "description": "Secure Shell provides an encrypted channel for logging into remote systems, running commands, and transferring files, replacing older unencrypted tools like Telnet and rlogin."
+  },
+  {
+    "abbr": "SSTP",
+    "full": "Secure Socket Tunneling Protocol",
+    "category": "Protocol",
+    "short": "A Microsoft VPN protocol that tunnels traffic through an HTTPS connection.",
+    "description": "Secure Socket Tunneling Protocol wraps VPN traffic inside a standard HTTPS (TLS) connection, which lets it more easily pass through firewalls and proxies that would block other VPN protocols."
+  },
+  {
+    "abbr": "STP",
+    "full": "Spanning Tree Protocol / Shielded Twisted Pair",
+    "category": "Networking",
+    "short": "A loop-prevention network protocol, or a shielded cable type.",
+    "description": "STP most often refers to the Spanning Tree Protocol, which prevents loops in Ethernet networks that have redundant paths. It can also mean Shielded Twisted Pair, a network cable type with extra shielding against electromagnetic interference."
+  },
+  {
+    "abbr": "TCP/IP",
+    "full": "Transmission Control Protocol / Internet Protocol",
+    "category": "Networking",
+    "short": "The foundational suite of protocols that the internet is built on.",
+    "description": "TCP/IP refers to the combination of the Transmission Control Protocol (reliable, ordered delivery) and the Internet Protocol (addressing and routing), and by extension the whole layered protocol suite built on them that underlies nearly all internet and network communication."
+  },
+  {
+    "abbr": "TTL",
+    "full": "Time to live",
+    "category": "Networking",
+    "short": "A value that limits how long data or a packet is allowed to exist before being discarded.",
+    "description": "TTL is a counter placed in a network packet or a cached record that decreases each time it's forwarded or ages; when it hits zero, the packet is dropped or the cached data is considered stale - used both to prevent routing loops and to control DNS cache expiry."
+  },
+  {
+    "abbr": "TTY",
+    "full": "Teletypewriter",
+    "category": "Linux",
+    "short": "A text terminal interface for interacting with a computer, or the device file representing one.",
+    "description": "Teletypewriter originally referred to physical hardware terminals; the term now refers to a terminal interface in Unix-like systems (a /dev/tty device) used for text-based login sessions and command input."
+  },
+  {
+    "abbr": "TWT",
+    "full": "Target Wake Time",
+    "category": "Terminology",
+    "short": "A Wi-Fi power-saving feature that schedules when a device wakes to communicate with the router.",
+    "description": "Target Wake Time, introduced in Wi-Fi 6, lets a device and access point agree on a schedule for when the device needs to wake and check for data, letting it sleep the rest of the time to significantly extend battery life - especially useful for IoT devices."
+  },
+  {
+    "abbr": "UHCI",
+    "full": "Universal Host Controller Interface",
+    "category": "Linux",
+    "short": "Intel's older USB host controller interface standard, mainly for USB 1.1.",
+    "description": "Universal Host Controller Interface was Intel's specification for USB 1.1 host controllers, competing with the alternative OHCI standard before being replaced by EHCI and later xHCI."
+  },
+  {
+    "abbr": "UNESCO",
+    "full": "United Nations Educational Scientific and Cultural Organisation",
+    "category": "Resource",
+    "short": "A United Nations agency promoting cooperation in education, science and culture.",
+    "description": "The United Nations Educational, Scientific and Cultural Organization works on international collaboration in education, science, culture and communication, including digital literacy and open access initiatives relevant to IT and information studies."
+  },
+  {
+    "abbr": "UPT",
+    "full": "Unshielded twisted pair",
+    "category": "Networking",
+    "short": "Basic twisted-pair cable with no extra shielding against interference.",
+    "description": "Unshielded Twisted Pair is the common, cheaper type of copper network cable - like standard Cat5e/Cat6 ethernet cable - that relies on the twisting of wire pairs alone (not extra shielding) to reduce electromagnetic interference, adequate for most typical indoor networking use."
+  },
+  {
+    "abbr": "USB",
+    "full": "Universal Serial Bus",
+    "category": "Terminology",
+    "short": "The ubiquitous standard for connecting peripherals and transferring data or power.",
+    "description": "Universal Serial Bus is a standardized interface for connecting devices like keyboards, storage drives and phones to a computer, defining both the physical connector and the protocol for data transfer and power delivery, with generations from USB 1.0 through USB4."
+  },
+  {
+    "abbr": "UUID",
+    "full": "Universally Unique Identifier",
+    "category": "Linux",
+    "short": "A 128-bit identifier designed to be unique across systems without central coordination.",
+    "description": "A Universally Unique Identifier is generated (often from random data or a timestamp/hardware combination) such that the probability of two UUIDs colliding is negligible, making it useful for identifying database records, files, or devices without a central registry."
+  },
+  {
+    "abbr": "VFAT",
+    "full": "Virtual File Allocation System",
+    "category": "Terminology",
+    "short": "An extension to the FAT file system that adds support for long file names.",
+    "description": "Virtual FAT layers long-filename support on top of the original FAT file system, which was limited to short 8.3-style names, while remaining backward compatible with older FAT-only systems."
+  },
+  {
+    "abbr": "VFS",
+    "full": "Virtual File System",
+    "category": "Terminology",
+    "short": "An abstraction layer that lets an OS support many different file systems through one interface.",
+    "description": "The Virtual File System provides a common interface between the operating system's kernel and the many underlying file system implementations (ext4, NTFS, FAT, etc.), so applications can access files the same way regardless of the actual file system in use."
+  },
+  {
+    "abbr": "VGA",
+    "full": "Video Graphics Array",
+    "category": "Terminology",
+    "short": "An older video display standard and the connector associated with it.",
+    "description": "Video Graphics Array originally referred to a 1987 IBM display standard, but the term is now mostly used for the analog 15-pin VGA connector, largely replaced by digital standards like HDMI and DisplayPort."
+  },
+  {
+    "abbr": "VHCI",
+    "full": "Virtual Host Controller Interface",
+    "category": "Linux",
+    "short": "A virtual USB host controller that lets USB devices be shared or redirected over a network.",
+    "description": "Virtual Host Controller Interface presents a software-emulated USB controller to an operating system, commonly used to redirect a physical USB device connected to one machine so it appears attached to another (e.g. in USB/IP or virtualization setups)."
+  },
+  {
+    "abbr": "VoIP",
+    "full": "Voice over IP calls",
+    "category": "Networking",
+    "short": "Making voice calls over the internet instead of traditional phone lines.",
+    "description": "Voice over IP converts audio into data packets and transmits them over an IP network, underlying services like WhatsApp calls, Zoom, and business VoIP phone systems, instead of using the traditional circuit-switched telephone network."
+  },
+  {
+    "abbr": "W3C",
+    "full": "World Wide Web Consortium",
+    "category": "Resource",
+    "short": "The organization that develops standards for the World Wide Web, like HTML and CSS.",
+    "description": "The World Wide Web Consortium is an international standards body that develops and maintains specifications such as HTML, CSS and web accessibility guidelines, aiming to keep the web interoperable across browsers and platforms."
+  },
+  {
+    "abbr": "WAN",
+    "full": "Wide Area Network",
+    "category": "Networking",
+    "short": "A network that spans a large geographic area, connecting multiple smaller networks.",
+    "description": "A Wide Area Network connects LANs across cities, countries or continents - the internet itself is the largest example - typically using leased lines, MPLS, or VPNs over public infrastructure rather than privately owned cabling."
+  },
+  {
+    "abbr": "WBS",
+    "full": "Work Breakdown Structure",
+    "category": "Studies",
+    "short": "A hierarchical breakdown of a project into smaller, manageable tasks.",
+    "description": "A Work Breakdown Structure decomposes a project's total scope of work into progressively smaller deliverables and tasks, used in project management to plan, estimate and assign work."
+  },
+  {
+    "abbr": "WEP",
+    "full": "Wired Equivalent Privacy",
+    "category": "Protocol",
+    "short": "The original, now-broken Wi-Fi encryption standard.",
+    "description": "Wired Equivalent Privacy was the first Wi-Fi security protocol, but serious cryptographic flaws mean it can be cracked in minutes with common tools; it was replaced by WPA and later WPA2/WPA3 and should never be used today."
+  },
+  {
+    "abbr": "Wi-Fi",
+    "full": "Wireless Fidelity",
+    "category": "Terminology",
+    "short": "The common brand name for wireless local area networking technology.",
+    "description": "Wi-Fi (originally short for 'Wireless Fidelity', though the phrase is largely retconned marketing) refers to the IEEE 802.11 family of wireless networking standards that let devices connect to a LAN and the internet without cables."
+  },
+  {
+    "abbr": "WPA",
+    "full": "Wi-Fi Protected Access",
+    "category": "Protocol",
+    "short": "The Wi-Fi security standard that replaced the broken WEP protocol.",
+    "description": "Wi-Fi Protected Access introduced stronger encryption (TKIP) and key management than WEP as an interim fix, before being superseded by the more robust WPA2 and WPA3 standards."
+  },
+  {
+    "abbr": "WSL",
+    "full": "Windows Subsystem for Linux",
+    "category": "Terminology",
+    "short": "A Windows feature that lets you run a real Linux environment alongside Windows.",
+    "description": "Windows Subsystem for Linux lets users run Linux distributions and command-line tools directly on Windows without a traditional virtual machine or dual-boot setup, popular with developers who need Linux tooling."
+  },
+  {
+    "abbr": "WYSIWYG",
+    "full": "What You See Is What You Get",
+    "category": "Linux",
+    "short": "An editor where what you see on screen matches the final output.",
+    "description": "What You See Is What You Get describes editing tools - like word processors or website builders - that render content as it will actually appear in its final form, rather than requiring you to write markup and preview it separately."
+  },
+  {
+    "abbr": "xHCI",
+    "full": "eXtensible Host Controller Interface",
+    "category": "Linux",
+    "short": "The current USB host controller interface standard, supporting USB 3.x speeds.",
+    "description": "eXtensible Host Controller Interface is the modern specification for USB controllers, supporting USB 3.0/3.1/3.2 speeds and superseding the older UHCI/OHCI/EHCI standards used for USB 1.1/2.0."
+  },
+  {
+    "abbr": "XaaS",
+    "full": "Everything as a Service",
+    "category": "Terminology",
+    "short": "A catch-all term for 'anything' delivered as a cloud subscription service.",
+    "description": "Everything (or Anything) as a Service is an umbrella term covering the SaaS/PaaS/IaaS model applied broadly - software, platforms, infrastructure, security, and more - all delivered and billed as an on-demand service rather than owned outright."
+  },
+  {
+    "abbr": "SOA",
+    "full": "Start Of Authority",
+    "category": "MST",
+    "short": "A DNS record that holds key administrative information about a domain zone.",
+    "description": "The Start of Authority record specifies the primary name server for a DNS zone, the zone administrator's contact, and timing values like refresh and expiry intervals used by secondary name servers."
+  },
+  {
+    "abbr": "MADCAP",
+    "full": "Multicast Address Dynamic Client Allocation Protocol",
+    "category": "MST",
+    "short": "A protocol for dynamically assigning multicast IP addresses, the multicast counterpart to DHCP.",
+    "description": "Multicast Address Dynamic Client Allocation Protocol lets clients request and be assigned multicast group addresses dynamically from a server, rather than administrators having to allocate them manually."
+  },
+  {
+    "abbr": "RBAC",
+    "full": "Role Based Access Control",
+    "category": "MST",
+    "short": "Granting system access based on a user's role rather than assigning permissions individually.",
+    "description": "Role-Based Access Control groups permissions into roles (like 'Helpdesk' or 'Administrator') and assigns users to those roles, simplifying access management compared to granting permissions to each user one by one."
+  },
+  {
+    "abbr": "AGDLP",
+    "full": "A=Account, G=Global group, DL=Domain Local group, P=Permissions",
+    "category": "MST",
+    "short": "Microsoft's recommended model for structuring Active Directory groups and permissions.",
+    "description": "AGDLP is a best-practice pattern for Active Directory: put user Accounts into Global groups, put Global groups into Domain Local groups, and assign Permissions to the Domain Local groups - a structure designed to scale cleanly across multiple domains."
+  },
+  {
+    "abbr": "ADRMS",
+    "full": "Active Directory Right Management Service",
+    "category": "MST",
+    "short": "A Windows Server role that protects documents with persistent, content-level access rules.",
+    "description": "Active Directory Rights Management Services lets organizations encrypt and attach usage policies to files and emails - like preventing printing or forwarding - that stay enforced even after the file leaves its original location."
+  },
+  {
+    "abbr": "CA",
+    "full": "Certification Authority",
+    "category": "MST",
+    "short": "A trusted entity that issues digital certificates verifying identity.",
+    "description": "A Certification (or Certificate) Authority issues and signs digital certificates used in PKI, vouching that a public key genuinely belongs to the person, server or organization it claims to - the trust foundation underlying HTTPS and other TLS-secured connections."
+  },
+  {
+    "abbr": "IKEv2",
+    "full": "Internet Key Exchange version 2",
+    "category": "MST",
+    "short": "A modern, fast VPN protocol known for reliably reconnecting after network interruptions.",
+    "description": "Internet Key Exchange version 2 negotiates and manages the security keys for an IPsec VPN tunnel, and is especially popular on mobile devices because it can automatically re-establish a dropped connection when switching networks (e.g. Wi-Fi to cellular)."
+  },
+  {
+    "abbr": "AOVPN",
+    "full": "Always On VPN",
+    "category": "MST",
+    "short": "A Windows feature that automatically connects a VPN whenever a device is off the corporate network.",
+    "description": "Always On VPN establishes a VPN connection to corporate resources automatically and transparently - without user action - whenever a Windows device has internet access outside the trusted internal network."
+  },
+  {
+    "abbr": "RAS",
+    "full": "Remote Access Service",
+    "category": "MST",
+    "short": "A Windows Server role that provides remote connectivity, including VPN and dial-up access.",
+    "description": "Remote Access Service (or Routing and Remote Access Service) is a Windows Server role enabling remote clients to connect into a corporate network, historically over dial-up and now primarily via VPN protocols."
+  },
+  {
+    "abbr": "NPS",
+    "full": "Network Policy Server",
+    "category": "MST",
+    "short": "Microsoft's implementation of RADIUS for centralized authentication and policy enforcement.",
+    "description": "Network Policy Server acts as a RADIUS server (and proxy), centrally authenticating and authorizing connection requests - such as VPN logins or Wi-Fi 802.1X access - against Active Directory and enforcing configurable network access policies."
+  },
+  {
+    "abbr": "DMZ",
+    "full": "Demilitarized Zone",
+    "category": "MST",
+    "short": "A network segment that isolates public-facing servers from the trusted internal network.",
+    "description": "A Demilitarized Zone sits between the internet and an internal network, hosting services like web or mail servers that need to be reachable from outside, so that if one is compromised, the attacker still can't reach the internal network directly."
+  },
+  {
+    "abbr": "WAP",
+    "full": "Web Application Proxy",
+    "category": "MST",
+    "short": "A Windows Server role that securely publishes internal web apps to external users.",
+    "description": "Web Application Proxy sits in a DMZ and reverse-proxies requests to internal web applications, handling pre-authentication (often via AD FS) so external users can reach internal apps without a full VPN. Not to be confused with a Wireless Access Point, which shares the same abbreviation."
+  },
+  {
+    "abbr": "AD FS",
+    "full": "Active Directory Federation Services",
+    "category": "MST",
+    "short": "A Windows Server role that enables single sign-on across organizations and web applications.",
+    "description": "Active Directory Federation Services issues security tokens that let users authenticate once with their AD credentials and access multiple applications - including those outside their own organization - implementing claims-based identity federation."
+  },
+  {
+    "abbr": "RDP",
+    "full": "Remote Desktop Protocols",
+    "category": "MST",
+    "short": "Microsoft's protocol for remotely viewing and controlling another Windows computer's desktop.",
+    "description": "Remote Desktop Protocol transmits a remote computer's screen, keyboard and mouse input over the network, letting administrators or users control a Windows machine as if sitting in front of it."
+  },
+  {
+    "abbr": "VNC",
+    "full": "Virtual Network Computing",
+    "category": "MST",
+    "short": "A cross-platform protocol for remotely viewing and controlling another computer's desktop.",
+    "description": "Virtual Network Computing works similarly to RDP but is platform-independent and open, using the RFB protocol to transmit screen updates and relay keyboard/mouse input between a viewer and a remote host."
+  },
+  {
+    "abbr": "RFB",
+    "full": "Remote Frame Buffer",
+    "category": "MST",
+    "short": "The underlying protocol that VNC uses to transmit screen images and input events.",
+    "description": "Remote Frame Buffer is the low-level protocol VNC is built on, sending updates to a remote screen's pixel buffer and relaying keyboard and mouse events back to the host being controlled."
+  },
+  {
+    "abbr": "KVM",
+    "full": "Keyboard, Video, Mouse",
+    "category": "MST",
+    "short": "A device (or feature) that lets you control multiple computers with one keyboard, monitor and mouse.",
+    "description": "A Keyboard, Video, Mouse switch lets an administrator switch a single set of physical keyboard, monitor and mouse between multiple servers, commonly used in data centers with dense server racks."
+  },
+  {
+    "abbr": "RSAT",
+    "full": "Remote Server Administration Tools",
+    "category": "MST",
+    "short": "A set of Windows tools for managing Windows Server roles remotely from a client PC.",
+    "description": "Remote Server Administration Tools lets an administrator install management consoles - like Active Directory Users and Computers, or DNS Manager - on a regular Windows client machine to manage servers remotely, without needing to log into the server directly."
+  },
+  {
+    "abbr": "ATP",
+    "full": "Advanced Threat Protection",
+    "category": "MST",
+    "short": "Microsoft security products/features aimed at detecting and blocking advanced attacks.",
+    "description": "Advanced Threat Protection is a family of Microsoft security capabilities (e.g. Microsoft Defender for Office 365 ATP) that use behavioral analysis and threat intelligence to detect sophisticated attacks like phishing and zero-day malware that simpler signature-based defenses miss."
+  },
+  {
+    "abbr": "ASR",
+    "full": "Attack Surface Reduction",
+    "category": "MST",
+    "short": "Windows Defender rules that block common techniques malware uses to gain a foothold.",
+    "description": "Attack Surface Reduction rules in Microsoft Defender restrict risky behaviors - like Office apps launching child processes or scripts running from email attachments - to shrink the ways malware can execute on a device, even before it's specifically detected."
+  },
+  {
+    "abbr": "WFAS",
+    "full": "Windows Firewall with Advanced Security",
+    "category": "MST",
+    "short": "The advanced management console for Windows' built-in host firewall.",
+    "description": "Windows Firewall with Advanced Security is the detailed configuration interface for the Windows Firewall, allowing granular inbound/outbound rules based on program, port, protocol and network profile, beyond what the basic Control Panel firewall settings expose."
+  },
+  {
+    "abbr": "NLB",
+    "full": "Network Load Balancing",
+    "category": "MST",
+    "short": "A Windows feature that spreads incoming traffic across multiple servers for capacity and failover.",
+    "description": "Network Load Balancing distributes client requests across a cluster of servers (such as web or VPN servers) to increase capacity and provide failover if one node goes down, without requiring dedicated load-balancing hardware."
+  },
+  {
+    "abbr": "DIP",
+    "full": "Dedicated Internet Protocol",
+    "category": "MST",
+    "short": "A fixed, dedicated public IP address assigned to a specific resource.",
+    "description": "A Dedicated IP is a public IP address reserved exclusively for one server or service, rather than shared among multiple resources, often required for things like SSL certificates on older systems or predictable firewall rules."
+  },
+  {
+    "abbr": "VIP",
+    "full": "Virtual Internet Protocol",
+    "category": "MST",
+    "short": "A single IP address that represents a group of servers behind a load balancer.",
+    "description": "A Virtual IP is an address that isn't tied to one specific physical network interface, instead being shared or moved between multiple servers - commonly used with load balancers or failover clusters so clients always connect to the same address regardless of which backend server actually handles the request."
+  },
+  {
+    "abbr": "SOFS",
+    "full": "Scale-Out Failover Server",
+    "category": "MST",
+    "short": "A Windows Server clustering feature for providing highly available file storage to applications.",
+    "description": "Scale-Out File Server lets multiple cluster nodes simultaneously serve the same file shares, providing continuous availability and load-balanced access to storage for applications like Hyper-V and SQL Server, rather than the traditional single-active-node file server model."
+  },
+  {
+    "abbr": "CNO",
+    "full": "Cluster Name Object",
+    "category": "MST",
+    "short": "The computer account object that represents a Windows failover cluster on the network.",
+    "description": "A Cluster Name Object is the Active Directory computer account automatically created for a failover cluster, giving the cluster itself an identity and IP address on the network, separate from its individual member servers."
+  },
+  {
+    "abbr": "Blob",
+    "full": "Binary Large Object",
+    "category": "CCF",
+    "short": "A chunk of unstructured binary data stored as a single object, e.g. in cloud storage.",
+    "description": "Binary Large Object refers to data - like an image, video or document - stored and retrieved as an undifferentiated blob rather than structured rows/columns, and is also the name of Azure's core object storage service, Azure Blob Storage."
+  },
+  {
+    "abbr": "FIDO2",
+    "full": "Fast IDentity Online",
+    "category": "CCF",
+    "short": "An open standard for passwordless, phishing-resistant authentication.",
+    "description": "FIDO2 lets users log in using a security key, fingerprint or device PIN instead of a password, using public-key cryptography so no shared secret is ever sent to or stored by the website - the basis of passkeys."
+  },
+  {
+    "abbr": "CSPM",
+    "full": "Cloud Security Posture Management",
+    "category": "CCF",
+    "short": "Tools that continuously check cloud environments for misconfigurations and compliance issues.",
+    "description": "Cloud Security Posture Management automatically scans cloud infrastructure (AWS, Azure, GCP, etc.) against security best practices and compliance frameworks, flagging risks like open storage buckets or overly permissive access before they're exploited."
+  },
+  {
+    "abbr": "ISV",
+    "full": "Independent Software Vendor",
+    "category": "CCF",
+    "short": "A company that builds and sells software, rather than software built in-house.",
+    "description": "An Independent Software Vendor develops and markets software products for other businesses or consumers, as opposed to a company building software purely for its own internal use."
+  },
+  {
+    "abbr": "JIT",
+    "full": "Just in Time",
+    "category": "CCF",
+    "short": "Granting elevated access only for a limited time when it's actually needed, not permanently.",
+    "description": "Just-in-Time access grants a user elevated or administrative privileges temporarily, for a specific task or time window, automatically revoking them afterward to reduce the risk of standing privileged accounts being abused."
+  },
+  {
+    "abbr": "JEA",
+    "full": "Just Enough Access",
+    "category": "CCF",
+    "short": "A PowerShell security feature that limits what specific admin tasks a user can perform remotely.",
+    "description": "Just Enough Access lets administrators grant a user the ability to run only a specific, limited set of PowerShell commands remotely - rather than full administrative rights - following the principle of least privilege."
+  },
+  {
+    "abbr": "CIAAN",
+    "full": "Confidentiality, Integrity, Availability, Authentication, Non-Repudiation",
+    "category": "IIS",
+    "short": "The core properties an information security program aims to protect.",
+    "description": "CIAAN extends the classic CIA triad (Confidentiality, Integrity, Availability) with Authentication and Non-Repudiation, together describing the key properties - keeping data secret, unaltered, accessible, verifying identity, and preventing denial of an action - that security controls aim to guarantee."
+  },
+  {
+    "abbr": "IA",
+    "full": "Information Assurance",
+    "category": "IIS",
+    "short": "Managing risk to information and systems, covering people, process and technology, not just technical controls.",
+    "description": "Information Assurance is a broader discipline than pure cybersecurity, encompassing the policies, risk management and operational practices - alongside technical controls - used to protect the confidentiality, integrity and availability of information."
+  },
+  {
+    "abbr": "RMIAS",
+    "full": "The Reference Model of InformationAssurance and Security",
+    "category": "IIS",
+    "short": "An academic framework mapping out the many dimensions of information assurance and security.",
+    "description": "The Reference Model of Information Assurance and Security is a conceptual model used in research and education to organize the goals, countermeasures and information taxonomy involved in securing systems, providing a common vocabulary for the field."
+  },
+  {
+    "abbr": "RoT",
+    "full": "Root of Trust",
+    "category": "IIS",
+    "short": "A foundational, inherently trusted hardware or software component everything else's security relies on.",
+    "description": "A Root of Trust is the starting point of a chain of trust - such as a hardware security module or a TPM chip - that is assumed to always behave correctly, since if it were compromised, no security guarantee built on top of it could be trusted either."
+  },
+  {
+    "abbr": "NVD",
+    "full": "National Vulnerability Database",
+    "category": "IIS",
+    "short": "The U.S. government's public database of known software vulnerabilities.",
+    "description": "The National Vulnerability Database, maintained by NIST, catalogs publicly disclosed vulnerabilities (referenced by CVE ID) along with severity scores (CVSS), affected products, and remediation information."
+  },
+  {
+    "abbr": "SCAP",
+    "full": "Security Content Automation Protocol",
+    "category": "IIS",
+    "short": "A standardized way to automate vulnerability checking and security configuration compliance.",
+    "description": "Security Content Automation Protocol is a suite of open standards (including CVE, CVSS and CPE) that lets security tools automatically check systems for known vulnerabilities and verify they meet configuration security baselines."
+  },
+  {
+    "abbr": "TCSEC",
+    "full": "Trusted Computer Systems Evaluation Criteria",
+    "category": "IIS",
+    "short": "An early U.S. government standard for evaluating the security of computer systems, nicknamed the 'Orange Book.'",
+    "description": "The Trusted Computer System Evaluation Criteria, published by the U.S. Department of Defense in the 1980s, defined a set of trust levels for evaluating operating system security, and was influential in shaping later standards like Common Criteria."
+  },
+  {
+    "abbr": "PCI DSS",
+    "full": "Payment Card Industry Data Security Standard",
+    "category": "IIS",
+    "short": "The security standard companies must follow to handle credit card payment data.",
+    "description": "The Payment Card Industry Data Security Standard sets requirements - like encrypting cardholder data and restricting access - that any organization storing, processing or transmitting credit card information must comply with."
+  },
+  {
+    "abbr": "FIM",
+    "full": "File Integrity Monitoring",
+    "category": "IIS",
+    "short": "Detecting unauthorized changes to critical files by monitoring them for modifications.",
+    "description": "File Integrity Monitoring tracks checksums or attributes of important system and configuration files, alerting administrators when an unexpected change occurs - often a sign of tampering, malware, or misconfiguration."
+  },
+  {
+    "abbr": "RAT",
+    "full": "Remote Access Trojan / Remote Administration Tool",
+    "category": "IIS",
+    "short": "Malicious: Remote Access Trojan. Legitimate: Remote Administration Tool.",
+    "description": "RAT is ambiguous. It can mean a Remote Access Trojan, malware that gives an attacker covert remote control of an infected machine, or a Remote Administration Tool, a legitimate program IT staff use to manage systems remotely. Context determines which is meant."
+  },
+  {
+    "abbr": "CPS",
+    "full": "Certificate Practice Statement",
+    "category": "IIS",
+    "short": "A document describing the policies and procedures a Certificate Authority follows when issuing certificates.",
+    "description": "A Certificate Practice Statement details how a Certificate Authority verifies identity, issues, manages and revokes digital certificates, giving relying parties transparency into how much trust to place in certificates it issues."
+  },
+  {
+    "abbr": "CRL",
+    "full": "Certificate Revocation List",
+    "category": "IIS",
+    "short": "A published list of digital certificates that have been revoked before their expiration date.",
+    "description": "A Certificate Revocation List is issued by a Certificate Authority and lets systems check whether a certificate they're relying on has been invalidated - for example because its private key was compromised - even though it hasn't yet expired."
+  },
+  {
+    "abbr": "PKCS",
+    "full": "Public Key Cryptographic Standards",
+    "category": "IIS",
+    "short": "A set of standards for how public-key cryptography should be implemented and formatted.",
+    "description": "Public Key Cryptography Standards are a family of specifications (PKCS#1 through PKCS#15) defining things like how RSA keys should be formatted, how certificates should be requested, and how encrypted messages should be structured, ensuring interoperability between different cryptographic software."
+  },
+  {
+    "abbr": "SCEP",
+    "full": "Simple Certificate Enrollment Protocol",
+    "category": "IIS",
+    "short": "A protocol that lets devices automatically request and receive digital certificates from a CA.",
+    "description": "Simple Certificate Enrollment Protocol automates certificate issuance for large numbers of devices - such as in mobile device management deployments - without requiring an administrator to manually approve each request."
+  },
+  {
+    "abbr": "UEBA",
+    "full": "user and entity behaviour analytics",
+    "category": "IIS",
+    "short": "Security tools that detect threats by spotting abnormal behavior from users or devices.",
+    "description": "User and Entity Behavior Analytics builds a baseline of normal activity for users and systems, then flags deviations - like a login at an unusual time or location - that could indicate a compromised account or insider threat, catching attacks that signature-based tools would miss."
+  },
+  {
+    "abbr": "WPA2",
+    "full": "Wi-Fi Protected Access version 2",
+    "category": "IIS",
+    "short": "The long-standing standard Wi-Fi security protocol using AES encryption.",
+    "description": "Wi-Fi Protected Access version 2 replaced WPA's weaker TKIP encryption with the much stronger AES-based CCMP, and was the dominant Wi-Fi security standard for over a decade before WPA3 began succeeding it."
+  },
+  {
+    "abbr": "AP",
+    "full": "Access point",
+    "category": "IIS",
+    "short": "A device that lets wireless devices connect to a wired network.",
+    "description": "A Wireless Access Point bridges Wi-Fi clients to a wired LAN, broadcasting a network name (SSID) that devices connect to instead of plugging in with a cable."
+  },
+  {
+    "abbr": "BSS",
+    "full": "Basic service sets",
+    "category": "IIS",
+    "short": "A single Wi-Fi access point and all the client devices connected to it.",
+    "description": "A Basic Service Set is the fundamental building block of a Wi-Fi network - one access point plus its associated stations - identified by a BSSID (the AP's MAC address); multiple BSSs can be joined into an Extended Service Set (ESS) sharing one SSID."
+  },
+  {
+    "abbr": "CCMP",
+    "full": "Counter Mode Cipher Block Chaining Message Authentication Code Protocol",
+    "category": "IIS",
+    "short": "The encryption protocol used by WPA2 to secure Wi-Fi traffic.",
+    "description": "Counter Mode Cipher Block Chaining Message Authentication Code Protocol is built on AES and provides both encryption and integrity checking for Wi-Fi frames, replacing the weaker TKIP used in the original WPA."
+  },
+  {
+    "abbr": "SAE",
+    "full": "Simultaneous Authentication of Equals",
+    "category": "IIS",
+    "short": "The secure key-exchange method used by WPA3 to replace WPA2's vulnerable four-way handshake.",
+    "description": "Simultaneous Authentication of Equals (also known as Dragonfly) establishes a shared session key between a device and access point in a way that resists offline password-guessing attacks, fixing weaknesses found in WPA2's handshake."
+  },
+  {
+    "abbr": "IV",
+    "full": "Initialisation Vector",
+    "category": "IIS",
+    "short": "A random or unique value mixed into encryption to ensure identical plaintext doesn't produce identical ciphertext.",
+    "description": "An Initialization Vector is combined with a key to randomize the output of an encryption algorithm, so encrypting the same data twice produces different ciphertext each time - critical for security, since reused or predictable IVs (as in WEP) can break the encryption entirely."
+  },
+  {
+    "abbr": "TKIP",
+    "full": "Temporal Key Integrity Protocol",
+    "category": "IIS",
+    "short": "An interim Wi-Fi encryption protocol used by WPA, now considered weak.",
+    "description": "Temporal Key Integrity Protocol was designed as a quick, backward-compatible fix for WEP's flaws, dynamically changing encryption keys per packet, but it's since been shown to have its own weaknesses and was replaced by AES-based CCMP in WPA2."
+  },
+  {
+    "abbr": "MIC",
+    "full": "Message Integrity Check",
+    "category": "IIS",
+    "short": "A cryptographic check that data hasn't been altered or forged in transit.",
+    "description": "A Message Integrity Check (or Code) is a value computed from a message's contents and a secret key, letting the recipient verify the message wasn't tampered with or forged en route - used, for example, to fix a spoofing flaw in the original WEP protocol."
+  },
+  {
+    "abbr": "PSK",
+    "full": "Pre-shared Key",
+    "category": "IIS",
+    "short": "A secret key or passphrase shared in advance between two parties for authentication or encryption.",
+    "description": "A Pre-Shared Key is a password known to both sides of a connection ahead of time - like a home Wi-Fi password (WPA2-PSK) - as opposed to enterprise authentication methods that verify each user individually against a server."
+  },
+  {
+    "abbr": "BR",
+    "full": "Basic Rate",
+    "category": "IIS",
+    "short": "The original, lower-speed data rate used in classic Bluetooth.",
+    "description": "Basic Rate refers to Bluetooth's original transmission mode, offering lower throughput than the later Enhanced Data Rate (EDR) extension."
+  },
+  {
+    "abbr": "EDR",
+    "full": "Enhanced Data Rate",
+    "category": "IIS",
+    "short": "A Bluetooth extension that increases data transfer speed over the original Basic Rate.",
+    "description": "Enhanced Data Rate boosts classic Bluetooth's throughput several times over the original Basic Rate by using more efficient modulation, while remaining backward compatible with Basic Rate devices."
+  },
+  {
+    "abbr": "SERP",
+    "full": "Search Engine Result Page",
+    "category": "IIS",
+    "short": "The results page shown after running a search engine query.",
+    "description": "A Search Engine Result Page is what a user sees after searching - a list of organic results, ads, and features like knowledge panels - and its layout and ranking are the central target of SEO efforts."
+  },
+  {
+    "abbr": "NRD",
+    "full": "Newly Registered Domains",
+    "category": "IIS",
+    "short": "Domain names that were recently registered, often monitored as a phishing/fraud risk indicator.",
+    "description": "Newly Registered Domains are frequently used in phishing and scam campaigns because attackers register a fresh look-alike domain right before an attack, so many security tools flag or block traffic to very recently registered domains as a precaution."
+  },
+  {
+    "abbr": "XSS",
+    "full": "Cross site scripting",
+    "category": "IIS",
+    "short": "A web vulnerability that lets an attacker inject malicious scripts into pages viewed by other users.",
+    "description": "Cross-Site Scripting occurs when an application includes untrusted input in a web page without properly sanitizing it, allowing an attacker's script to run in another user's browser session - potentially stealing cookies, session tokens, or performing actions as that user."
+  },
+  {
+    "abbr": "CSRF",
+    "full": "Cross-site request forgery (also called XSRF)",
+    "category": "IIS",
+    "short": "An attack that tricks a logged-in user's browser into submitting an unwanted request.",
+    "description": "Cross-Site Request Forgery exploits the fact that browsers automatically attach cookies to requests, tricking a victim's browser into submitting a malicious request (e.g. transferring funds) to a site they're authenticated on, without their knowledge. Also called XSRF."
+  },
+  {
+    "abbr": "WAF",
+    "full": "Web Application Firewall",
+    "category": "IIS",
+    "short": "A firewall that filters and monitors HTTP traffic specifically to protect web applications.",
+    "description": "A Web Application Firewall inspects incoming web requests for attack patterns - like SQL injection or XSS payloads - and blocks malicious traffic before it reaches the application, sitting at a higher layer than a traditional network firewall."
+  },
+  {
+    "abbr": "CSP",
+    "full": "Content Security Policy",
+    "category": "IIS",
+    "short": "A browser security header that restricts which sources of content a web page is allowed to load.",
+    "description": "Content Security Policy lets a website declare, via an HTTP header, which domains scripts, styles and other resources are allowed to load from, significantly reducing the impact of XSS attacks by blocking unauthorized script execution."
+  },
+  {
+    "abbr": "PRF",
+    "full": "Pseudo Random Function",
+    "category": "IIS",
+    "short": "A deterministic function that produces output indistinguishable from true randomness, given a secret key.",
+    "description": "A Pseudo-Random Function takes a key and an input and produces an output that looks statistically random and can't be predicted without knowing the key, underpinning many cryptographic protocols' key derivation and authentication steps."
+  },
+  {
+    "abbr": "HMAC",
+    "full": "Hash-based Message Authentication Code",
+    "category": "IIS",
+    "short": "A way to verify both the integrity and authenticity of a message using a shared secret key.",
+    "description": "Hash-based Message Authentication Code combines a cryptographic hash function with a secret key to produce a tag that proves a message wasn't altered and came from someone who knows the key, widely used in API authentication and protocols like TLS."
+  },
+  {
+    "abbr": "MAC",
+    "full": "Mandatory Access Control",
+    "category": "IIS",
+    "short": "An access model where a central authority - not the resource owner - decides who can access what.",
+    "description": "Mandatory Access Control enforces access rules set centrally by an administrator or system policy (e.g. security labels/clearance levels), which regular users and even resource owners cannot override, in contrast to the more common Discretionary Access Control."
+  },
+  {
+    "abbr": "DAC",
+    "full": "Discretionary Access Control",
+    "category": "IIS",
+    "short": "An access model where the owner of a resource decides who else can access it.",
+    "description": "Discretionary Access Control lets the owner of a file or resource grant or restrict access to other users at their own discretion, the model used by typical file permissions in Windows and Unix-like systems."
+  },
+  {
+    "abbr": "ABAC",
+    "full": "Attribute Based Access Control",
+    "category": "IIS",
+    "short": "An access model that grants permissions based on a flexible combination of attributes.",
+    "description": "Attribute-Based Access Control evaluates rules against attributes of the user, resource, and environment (e.g. department, time of day, device type) to decide access dynamically, offering more flexibility than static role- or rule-based models."
+  },
+  {
+    "abbr": "XACML",
+    "full": "Extensible Access Control Markup Language",
+    "category": "IIS",
+    "short": "An XML-based standard language for writing and enforcing fine-grained access control policies.",
+    "description": "Extensible Access Control Markup Language defines a standard way to express access control policies and request/response decisions in XML, commonly used to implement attribute-based access control (ABAC) in a vendor-neutral way."
+  },
+  {
+    "abbr": "RuBAC",
+    "full": "Rule Based Access Control",
+    "category": "IIS",
+    "short": "An access model that grants or denies access based on a fixed set of if-then rules.",
+    "description": "Rule-Based Access Control applies predefined rules - such as 'deny access outside business hours' - uniformly to all users, distinct from role-based control, which instead grants access based on a user's assigned role."
+  },
+  {
+    "abbr": "DLP",
+    "full": "Data Loss Prevention",
+    "category": "IIS",
+    "short": "Tools and policies that detect and block sensitive data from leaving an organization improperly.",
+    "description": "Data Loss Prevention monitors and controls data in use, in motion and at rest, blocking or flagging actions like emailing a file containing credit card numbers outside the company, to prevent accidental or malicious data leaks."
+  },
+  {
+    "abbr": "IPS",
+    "full": "Intrusion Protection System",
+    "category": "IIS",
+    "short": "A security tool that actively blocks detected network threats in real time.",
+    "description": "An Intrusion Prevention System sits inline with network traffic and automatically blocks or drops traffic matching known attack patterns, going a step further than an IDS, which only detects and alerts."
+  },
+  {
+    "abbr": "IDS",
+    "full": "Intrusion Detection System",
+    "category": "IIS",
+    "short": "A security tool that monitors network or system activity and alerts on suspicious behavior.",
+    "description": "An Intrusion Detection System analyzes traffic or logs for signs of an attack and raises alerts for investigation, but - unlike an IPS - does not automatically block the traffic itself."
+  },
+  {
+    "abbr": "MDM",
+    "full": "Mobile Device Management",
+    "category": "IIS",
+    "short": "Software that lets IT centrally manage, secure and configure mobile devices.",
+    "description": "Mobile Device Management lets an organization enroll employee phones and tablets to enforce security policies (like passcodes and encryption), remotely wipe lost devices, and push configuration - foundational to managing BYOD and company-owned device fleets."
+  },
+  {
+    "abbr": "MAM",
+    "full": "Mobile Application Management",
+    "category": "IIS",
+    "short": "Managing and securing specific business apps on a device, without controlling the whole device.",
+    "description": "Mobile Application Management applies policies - like requiring a PIN or preventing copy-paste - to individual work apps and their data, useful on BYOD devices where a company wants to protect corporate data without managing the entire personal device."
+  },
+  {
+    "abbr": "MCM",
+    "full": "Mobile Content Management",
+    "category": "IIS",
+    "short": "Managing and distributing documents and content securely to mobile devices.",
+    "description": "Mobile Content Management controls how corporate documents and files are distributed, accessed and secured on mobile devices, often working alongside MDM and MAM as part of a broader enterprise mobility strategy."
+  },
+  {
+    "abbr": "CYOD",
+    "full": "Choose Your Own Device",
+    "category": "IIS",
+    "short": "A device policy where employees pick a company-approved device from an approved list.",
+    "description": "Choose Your Own Device lets employees select their work device from a company-curated list of approved options, balancing user choice against BYOD's security and support challenges, since IT still controls exactly which hardware is in use."
+  },
+  {
+    "abbr": "COPE",
+    "full": "Company Owned/Personally Enabled",
+    "category": "IIS",
+    "short": "A device policy where the company owns the device but allows personal use.",
+    "description": "Company Owned/Personally Enabled devices are purchased and managed by the organization but employees are permitted to use them for personal tasks too, giving IT full control while offering more flexibility than a strictly business-only device."
+  },
+  {
+    "abbr": "COBO",
+    "full": "Company Owned/Business Only",
+    "category": "IIS",
+    "short": "A device policy where a company-owned device is restricted to business use only.",
+    "description": "Company Owned/Business Only devices are fully managed and owned by the organization, with personal use disallowed, typically used in highly regulated or security-sensitive environments."
+  },
+  {
+    "abbr": "CDE",
+    "full": "Cardholder Data Environment",
+    "category": "IIS",
+    "short": "The systems, people and processes that store, process or transmit credit card data.",
+    "description": "The Cardholder Data Environment is the specific scope of an organization's infrastructure - servers, networks, applications - that handles payment card information, and is what PCI DSS compliance requirements are assessed against."
+  },
+  {
+    "abbr": "CTAP",
+    "full": "Client to Authenticator Protocol",
+    "category": "Protocol",
+    "short": "The protocol that lets an external authenticator (like a security key) talk to a device during login.",
+    "description": "Client to Authenticator Protocol is part of the FIDO2 standard, defining how a device (computer or phone) communicates with an external authenticator such as a USB security key or a phone acting as one, to perform passwordless or multi-factor login."
+  },
+  {
+    "abbr": "AAD",
+    "full": "Azure Active Directory",
+    "category": "Exam EP1",
+    "short": "Microsoft's cloud-based identity and access management service (now called Microsoft Entra ID).",
+    "description": "Azure Active Directory provides identity services - authentication, single sign-on, and access management - for Microsoft 365, Azure and thousands of third-party cloud apps; it was rebranded Microsoft Entra ID in 2023, though 'Azure AD' remains in common use."
+  }
+]
