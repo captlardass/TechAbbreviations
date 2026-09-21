@@ -91,4 +91,4 @@ Python 3, no external dependencies (Windows TUI mode needs `windows-curses`, see
 
 ## Data
 
-Abbreviations are stored in `abbreviations.json`, currently covering 340 terms across categories like Software, Networking, and Security.
+Abbreviations are stored in `abbreviations.json`, currently covering 446 terms across categories like Software, Networking, AI/ML, Cloud, and Security.

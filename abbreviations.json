@@ -2814,5 +2814,1312 @@
     "category": "Exam EP1",
     "short": "Microsoft's cloud-based identity and access management service (now called Microsoft Entra ID).",
     "description": "Azure Active Directory provides identity services - authentication, single sign-on, and access management - for Microsoft 365, Azure and thousands of third-party cloud apps; it was rebranded Microsoft Entra ID in 2023, though 'Azure AD' remains in common use."
+  },
+  {
+    "abbr": "MCP",
+    "full": "Model Context Protocol",
+    "category": "AI/ML",
+    "short": "An open protocol that lets AI models connect to external tools and data sources.",
+    "description": "A standardized client-server protocol for connecting AI assistants to external tools, data sources and systems, so a model can call a calendar, database or API without a custom integration built for each one.",
+    "example": "Claude Desktop uses an MCP server to read files from a local project or query a company's internal database during a conversation.",
+    "see_also": [
+      "LLM",
+      "API",
+      "AI"
+    ]
+  },
+  {
+    "abbr": "gRPC",
+    "full": "gRPC Remote Procedure Calls",
+    "category": "Protocol",
+    "short": "A high-performance RPC framework built on HTTP/2 and Protocol Buffers.",
+    "description": "An open-source remote procedure call framework from Google that uses HTTP/2 for transport and Protocol Buffers for compact binary serialization, commonly used for fast communication between microservices.",
+    "example": "Two internal microservices exchange requests over gRPC instead of JSON over REST to cut latency.",
+    "see_also": [
+      "REST",
+      "API",
+      "JSON"
+    ]
+  },
+  {
+    "abbr": "GraphQL",
+    "full": "Graph Query Language",
+    "category": "Web",
+    "short": "A query language for APIs that lets clients request exactly the data they need.",
+    "description": "An API query language and runtime where clients specify the exact shape of the data they want in a single request, rather than calling multiple fixed REST endpoints.",
+    "example": "A mobile app requests just a user's name and avatar in one GraphQL query instead of calling three separate REST endpoints.",
+    "see_also": [
+      "REST",
+      "API",
+      "JSON"
+    ]
+  },
+  {
+    "abbr": "WASM",
+    "full": "WebAssembly",
+    "category": "Web",
+    "short": "A binary instruction format that runs near-native code in the browser.",
+    "description": "A low-level, binary code format that runs in modern web browsers at near-native speed, allowing languages like C++, Rust and Go to be compiled and executed alongside JavaScript.",
+    "example": "A browser-based video editor uses WASM to run a compiled C++ codec instead of a slower JavaScript port.",
+    "see_also": [
+      "DOM",
+      "API"
+    ]
+  },
+  {
+    "abbr": "PWA",
+    "full": "Progressive Web App",
+    "category": "Web",
+    "short": "A web app that behaves like a native app, with offline support and installability.",
+    "description": "A website built with modern web APIs so it can be installed on a device, work offline, send push notifications and otherwise behave like a native app while still being delivered through a browser.",
+    "example": "A news site's PWA lets readers add it to their home screen and keep reading articles cached before they went offline.",
+    "see_also": [
+      "SPA",
+      "DOM"
+    ]
+  },
+  {
+    "abbr": "SSG",
+    "full": "Static Site Generation",
+    "category": "Web",
+    "short": "Building a website's pages ahead of time as static HTML files.",
+    "description": "An approach to building websites where pages are rendered to static HTML at build time instead of on each request, giving fast load times and simple hosting compared to server-rendered pages.",
+    "example": "A documentation site uses an SSG to turn Markdown files into HTML pages that are deployed to a CDN.",
+    "see_also": [
+      "SPA",
+      "SSR",
+      "CDN"
+    ]
+  },
+  {
+    "abbr": "CORS",
+    "full": "Cross-Origin Resource Sharing",
+    "category": "Web",
+    "short": "A browser security mechanism that controls which sites can call an API from a different origin.",
+    "description": "A set of HTTP headers that let a server tell browsers which other origins are allowed to read its responses, relaxing the browser's default same-origin restriction in a controlled way.",
+    "example": "An API adds an Access-Control-Allow-Origin header so a web app hosted on a different domain can call it from the browser.",
+    "see_also": [
+      "HTTP",
+      "API",
+      "XSS"
+    ]
+  },
+  {
+    "abbr": "SOAP",
+    "full": "Simple Object Access Protocol",
+    "category": "Protocol",
+    "short": "An XML-based messaging protocol for exchanging structured data between systems.",
+    "description": "A protocol for exchanging structured information in web services using XML messages, typically over HTTP, with a formal contract defined in a WSDL file. Largely superseded by REST for new APIs but still common in enterprise and legacy systems.",
+    "example": "A bank's legacy payment system exposes a SOAP endpoint that partner systems call with a signed XML request.",
+    "see_also": [
+      "WSDL",
+      "XML",
+      "REST"
+    ]
+  },
+  {
+    "abbr": "WSDL",
+    "full": "Web Services Description Language",
+    "category": "Protocol",
+    "short": "An XML format describing what operations a SOAP web service offers.",
+    "description": "An XML-based contract that describes a SOAP web service's available operations, the messages they accept and return, and how to reach them, letting client tools generate code to call the service.",
+    "example": "A developer imports a WSDL file into their IDE to auto-generate a client for a partner's SOAP API.",
+    "see_also": [
+      "SOAP",
+      "XML"
+    ]
+  },
+  {
+    "abbr": "FaaS",
+    "full": "Function as a Service",
+    "category": "Cloud",
+    "short": "Running individual functions in the cloud without managing servers.",
+    "description": "A cloud computing model where developers deploy individual functions that run on demand and scale automatically, with the provider managing all underlying servers; often called serverless computing.",
+    "example": "An image upload triggers a FaaS function that resizes the image and stores a thumbnail, with no server running while idle.",
+    "see_also": [
+      "PaaS",
+      "IaaS",
+      "XaaS"
+    ]
+  },
+  {
+    "abbr": "BaaS",
+    "full": "Backend as a Service",
+    "category": "Cloud",
+    "short": "A cloud platform that provides ready-made backend building blocks like auth and databases.",
+    "description": "A cloud offering that provides pre-built backend infrastructure, such as authentication, databases and storage, through APIs and SDKs, so developers can focus on the frontend instead of building server-side logic from scratch.",
+    "example": "A startup uses a BaaS provider for user login and a database instead of building its own backend server.",
+    "see_also": [
+      "PaaS",
+      "SaaS",
+      "API"
+    ]
+  },
+  {
+    "abbr": "IOPS",
+    "full": "Input/Output Operations Per Second",
+    "category": "Hardware",
+    "short": "A measure of how many read/write operations a storage device can handle per second.",
+    "description": "A performance metric that counts the number of read and write operations a storage device or system can complete each second, used to compare disk and cloud storage performance under load.",
+    "example": "A database team provisions a cloud disk rated for 16,000 IOPS to handle a spike in transaction volume.",
+    "see_also": [
+      "SSD",
+      "HDD",
+      "NVMe"
+    ]
+  },
+  {
+    "abbr": "VDI",
+    "full": "Virtual Desktop Infrastructure",
+    "category": "Infrastructure",
+    "short": "Hosting desktop operating systems on central servers and streaming them to users.",
+    "description": "An infrastructure model where full desktop operating systems run as virtual machines in a data center or cloud, and users connect to them remotely, centralizing management, security and updates.",
+    "example": "Remote employees log into a VDI session to access their company desktop from a personal laptop.",
+    "see_also": [
+      "VM",
+      "RDP",
+      "DaaS"
+    ]
+  },
+  {
+    "abbr": "DaaS",
+    "full": "Desktop as a Service",
+    "category": "Cloud",
+    "short": "Cloud-hosted virtual desktops delivered and billed as a subscription service.",
+    "description": "A cloud service that delivers virtual desktops to end users on a subscription basis, with the provider handling the underlying infrastructure, unlike self-managed VDI.",
+    "example": "A company subscribes to a DaaS provider so new hires get a ready-to-use cloud desktop on day one.",
+    "see_also": [
+      "VDI",
+      "SaaS",
+      "XaaS"
+    ]
+  },
+  {
+    "abbr": "SRE",
+    "full": "Site Reliability Engineering",
+    "category": "DevOps",
+    "short": "Applying software engineering practices to keep systems reliable at scale.",
+    "description": "A discipline that applies software engineering approaches to operations problems, using practices like error budgets, automation and monitoring to keep large-scale systems reliable and performant.",
+    "example": "An SRE team sets an error budget for a service and blocks new releases once too many requests are failing.",
+    "see_also": [
+      "SLA",
+      "SLO",
+      "SLI"
+    ]
+  },
+  {
+    "abbr": "APM",
+    "full": "Application Performance Monitoring",
+    "category": "DevOps",
+    "short": "Tools and practices for tracking an application's performance and health in production.",
+    "description": "A category of tools that track metrics like response time, error rates and resource usage across an application's components, helping teams detect and diagnose performance problems in production.",
+    "example": "An APM tool flags that checkout requests suddenly take 3 seconds instead of 300 milliseconds.",
+    "see_also": [
+      "SLA",
+      "SLO",
+      "MTTR"
+    ]
+  },
+  {
+    "abbr": "ELK",
+    "full": "Elasticsearch, Logstash and Kibana",
+    "category": "DevOps",
+    "short": "A popular open-source stack for collecting, storing and visualizing log data.",
+    "description": "A combination of three open-source tools: Logstash collects and processes logs, Elasticsearch indexes and searches them, and Kibana visualizes the results, commonly deployed together for centralized logging.",
+    "example": "An ops team searches the ELK stack to find every error log from a service during a five-minute outage.",
+    "see_also": [
+      "SIEM",
+      "APM"
+    ]
+  },
+  {
+    "abbr": "MTTR",
+    "full": "Mean Time To Repair",
+    "category": "DevOps",
+    "short": "The average time it takes to fix a failed system after it breaks.",
+    "description": "A reliability metric measuring the average time between a failure occurring and the system being restored to working order, used to gauge how quickly a team responds to and resolves incidents.",
+    "example": "After improving on-call alerting, a team's MTTR for critical incidents drops from two hours to twenty minutes.",
+    "see_also": [
+      "MTBF",
+      "SLA",
+      "SRE"
+    ]
+  },
+  {
+    "abbr": "MTBF",
+    "full": "Mean Time Between Failures",
+    "category": "Hardware",
+    "short": "The average time a system runs before it fails.",
+    "description": "A reliability metric that estimates the average time a piece of hardware or a system operates before experiencing a failure, used to predict maintenance needs and compare component reliability.",
+    "example": "A manufacturer rates a hard drive's MTBF at 1.5 million hours based on accelerated testing.",
+    "see_also": [
+      "MTTR",
+      "RAID"
+    ]
+  },
+  {
+    "abbr": "RTO",
+    "full": "Recovery Time Objective",
+    "category": "Infrastructure",
+    "short": "The maximum acceptable time to restore a system after a disaster.",
+    "description": "A disaster recovery target defining how long a business can tolerate a system being down before it must be restored, driving decisions about backup and failover architecture.",
+    "example": "A company sets a four-hour RTO for its order system, so its failover plan must bring it back within that window.",
+    "see_also": [
+      "RPO",
+      "DR",
+      "SLA"
+    ]
+  },
+  {
+    "abbr": "RPO",
+    "full": "Recovery Point Objective",
+    "category": "Infrastructure",
+    "short": "The maximum acceptable amount of data loss measured in time.",
+    "description": "A disaster recovery target defining how much data, measured as time since the last good backup, a business can afford to lose in an outage, driving how often backups or replication must run.",
+    "example": "A fifteen-minute RPO means backups must run at least every fifteen minutes so no more data than that can be lost.",
+    "see_also": [
+      "RTO",
+      "DR"
+    ]
+  },
+  {
+    "abbr": "ETL",
+    "full": "Extract, Transform, Load",
+    "category": "Data",
+    "short": "The process of pulling data from sources, reshaping it, and loading it into a target system.",
+    "description": "A data integration process that extracts data from one or more sources, transforms it into a consistent format, and loads it into a destination such as a data warehouse for analysis.",
+    "example": "A nightly ETL job pulls sales records from three regional databases and loads them into a central warehouse.",
+    "see_also": [
+      "ELT",
+      "RDBMS"
+    ]
+  },
+  {
+    "abbr": "ELT",
+    "full": "Extract, Load, Transform",
+    "category": "Data",
+    "short": "Like ETL, but raw data is loaded first and transformed inside the destination system.",
+    "description": "A variation of ETL where raw data is loaded into the target system, typically a cloud data warehouse, before being transformed there, taking advantage of the destination's own processing power.",
+    "example": "Raw event data is loaded straight into a cloud warehouse, then SQL transformations run inside it to build reporting tables.",
+    "see_also": [
+      "ETL"
+    ]
+  },
+  {
+    "abbr": "OLAP",
+    "full": "Online Analytical Processing",
+    "category": "Databases",
+    "short": "Database systems optimized for complex analytical queries over large datasets.",
+    "description": "A category of database systems and queries optimized for analyzing large volumes of historical data across multiple dimensions, such as slicing sales figures by region, product and time.",
+    "example": "An analyst uses an OLAP cube to compare quarterly revenue across regions and product lines in seconds.",
+    "see_also": [
+      "OLTP"
+    ]
+  },
+  {
+    "abbr": "OLTP",
+    "full": "Online Transaction Processing",
+    "category": "Databases",
+    "short": "Database systems optimized for fast, high-volume day-to-day transactions.",
+    "description": "A category of database systems optimized for handling many short, concurrent transactions such as inserts and updates, as opposed to the complex analytical queries used in OLAP systems.",
+    "example": "An e-commerce site's checkout database is an OLTP system, processing thousands of small orders per minute.",
+    "see_also": [
+      "OLAP",
+      "RDBMS",
+      "ACID"
+    ]
+  },
+  {
+    "abbr": "ACID",
+    "full": "Atomicity, Consistency, Isolation, Durability",
+    "category": "Databases",
+    "short": "The four guarantees a database transaction makes to keep data reliable.",
+    "description": "A set of four properties that guarantee reliable database transactions: atomicity (all-or-nothing), consistency (valid state to valid state), isolation (concurrent transactions don't interfere) and durability (committed data survives a crash).",
+    "example": "A bank transfer either moves money out of both accounts completely or not at all, thanks to ACID guarantees.",
+    "see_also": [
+      "RDBMS",
+      "SQL",
+      "BASE"
+    ]
+  },
+  {
+    "abbr": "BASE",
+    "full": "Basically Available, Soft state, Eventually consistent",
+    "category": "Databases",
+    "short": "A looser consistency model favored by many distributed NoSQL databases.",
+    "description": "An alternative to ACID used by many distributed NoSQL databases, trading strict consistency for availability and scalability: the system stays available, its state may change over time, and it becomes consistent eventually rather than instantly.",
+    "example": "A shopping cart stored in a NoSQL store might briefly show stale stock counts on different servers before syncing up.",
+    "see_also": [
+      "ACID",
+      "NoSQL",
+      "CAP"
+    ]
+  },
+  {
+    "abbr": "CAP",
+    "full": "Consistency, Availability, Partition tolerance",
+    "category": "Databases",
+    "short": "A theorem stating a distributed system can only fully guarantee two of these three properties.",
+    "description": "The CAP theorem states that a distributed data store can only fully provide two of three guarantees at once: consistency (every read gets the latest write), availability (every request gets a response), and partition tolerance (the system keeps working despite network splits).",
+    "example": "During a network partition, a distributed database must choose between returning possibly stale data (availability) or refusing to respond (consistency).",
+    "see_also": [
+      "ACID",
+      "BASE",
+      "NoSQL"
+    ]
+  },
+  {
+    "abbr": "CQRS",
+    "full": "Command Query Responsibility Segregation",
+    "category": "Software",
+    "short": "A pattern that splits an application's write operations from its read operations.",
+    "description": "An architectural pattern that separates the model used to update data (commands) from the model used to read data (queries), allowing each side to be optimized, scaled or even stored differently.",
+    "example": "A system writes orders to a normalized database but reads them from a separate, denormalized view built for fast dashboards.",
+    "see_also": [
+      "ORM",
+      "RDBMS"
+    ]
+  },
+  {
+    "abbr": "LRU",
+    "full": "Least Recently Used",
+    "category": "Software",
+    "short": "A cache eviction strategy that discards the item that hasn't been used in the longest time.",
+    "description": "A caching algorithm that, when the cache is full, removes the entry that has gone the longest without being accessed, on the assumption that recently used items are more likely to be used again soon.",
+    "example": "A browser's image cache evicts the least recently viewed images first when it runs out of space.",
+    "see_also": [
+      "TTL",
+      "CDN"
+    ]
+  },
+  {
+    "abbr": "MVC",
+    "full": "Model-View-Controller",
+    "category": "Software",
+    "short": "A pattern that splits an application into data, presentation and input-handling layers.",
+    "description": "A software architecture pattern that separates an application into the Model (data and business logic), the View (what the user sees) and the Controller (handles input and updates the model), making code easier to organize and test.",
+    "example": "A web framework routes a form submission to a controller, which updates the model and then re-renders the view.",
+    "see_also": [
+      "MVVM"
+    ]
+  },
+  {
+    "abbr": "MVVM",
+    "full": "Model-View-ViewModel",
+    "category": "Software",
+    "short": "A UI pattern that binds a view to a view model, which mediates with the underlying data model.",
+    "description": "A software architecture pattern used mainly in UI frameworks where a ViewModel exposes data and commands that a View binds to directly, keeping the View free of business logic and easy to swap or test.",
+    "example": "A desktop app's UI automatically updates a bound label whenever the ViewModel's underlying property changes.",
+    "see_also": [
+      "MVC"
+    ]
+  },
+  {
+    "abbr": "DI",
+    "full": "Dependency Injection",
+    "category": "Software",
+    "short": "Supplying an object's dependencies from the outside instead of it creating them itself.",
+    "description": "A design technique where a component receives the objects it depends on from an external source, such as a constructor argument or framework container, rather than creating them internally, making code easier to test and swap out.",
+    "example": "A service receives a database connection as a constructor argument instead of creating one itself, so tests can pass in a fake.",
+    "see_also": [
+      "IoC"
+    ]
+  },
+  {
+    "abbr": "IoC",
+    "full": "Inversion of Control",
+    "category": "Software",
+    "short": "A design principle where a framework, not your code, controls the flow and calls into it.",
+    "description": "A design principle where control over program flow is handed to a framework or container, which calls into application code at the right moments, rather than the application driving everything itself. Dependency Injection is one common way to implement it.",
+    "example": "A web framework calls a developer's route handler when a request arrives, instead of the developer's code polling for requests.",
+    "see_also": [
+      "DI"
+    ]
+  },
+  {
+    "abbr": "SOLID",
+    "full": "Single responsibility, Open/closed, Liskov substitution, Interface segregation, Dependency inversion",
+    "category": "Software",
+    "short": "Five object-oriented design principles for writing maintainable software.",
+    "description": "A set of five object-oriented design principles intended to make software easier to understand, extend and maintain: Single responsibility, Open/closed, Liskov substitution, Interface segregation and Dependency inversion.",
+    "example": "Splitting a class that both saves files and sends emails into two focused classes follows the Single Responsibility principle.",
+    "see_also": [
+      "DI",
+      "IoC"
+    ]
+  },
+  {
+    "abbr": "OOP",
+    "full": "Object-Oriented Programming",
+    "category": "Software",
+    "short": "A programming paradigm built around objects that bundle data and behavior together.",
+    "description": "A programming paradigm that organizes code around objects, which bundle together data (fields) and behavior (methods), using concepts like inheritance, encapsulation and polymorphism.",
+    "example": "A Car class in an OOP language bundles fields like speed with methods like accelerate().",
+    "see_also": [
+      "UML",
+      "SOLID"
+    ]
+  },
+  {
+    "abbr": "UML",
+    "full": "Unified Modeling Language",
+    "category": "Software",
+    "short": "A standardized set of diagrams for visualizing software design.",
+    "description": "A standardized visual modeling language used to design and document software systems, including diagram types for class structures, sequences of interactions, and state machines.",
+    "example": "A team sketches a UML class diagram before implementing a new order-processing module.",
+    "see_also": [
+      "OOP"
+    ]
+  },
+  {
+    "abbr": "npm",
+    "full": "Node Package Manager",
+    "category": "Software",
+    "short": "The default package manager for JavaScript and Node.js projects.",
+    "description": "A command-line tool and public registry for publishing and installing JavaScript packages, bundled by default with Node.js and used to manage a project's dependencies.",
+    "example": "Running 'npm install' downloads every package listed in a project's package.json file.",
+    "see_also": [
+      "CLI"
+    ]
+  },
+  {
+    "abbr": "GUID",
+    "full": "Globally Unique Identifier",
+    "category": "Software",
+    "short": "A 128-bit value used to uniquely identify information, Microsoft's term for a UUID.",
+    "description": "A 128-bit identifier generated to be unique across systems and time, functionally identical to a UUID; the term GUID is most associated with Microsoft platforms.",
+    "example": "A Windows database assigns each record a GUID like {3F2504E0-4F89-11D3-9A0C-0305E82C3301}.",
+    "see_also": [
+      "UUID"
+    ]
+  },
+  {
+    "abbr": "FIFO",
+    "full": "First In, First Out",
+    "category": "Software",
+    "short": "A processing order where the first item added is the first one removed.",
+    "description": "A queueing discipline where items are processed in the exact order they arrive, so the oldest item waiting is always the next one handled.",
+    "example": "A print queue processes documents FIFO, so the first document sent prints first.",
+    "see_also": [
+      "LIFO"
+    ]
+  },
+  {
+    "abbr": "LIFO",
+    "full": "Last In, First Out",
+    "category": "Software",
+    "short": "A processing order where the most recently added item is the first one removed.",
+    "description": "A queueing discipline where the most recently added item is processed first, as in a stack data structure; the opposite of FIFO.",
+    "example": "A function call stack is LIFO: the last function called is the first one to return.",
+    "see_also": [
+      "FIFO"
+    ]
+  },
+  {
+    "abbr": "PII",
+    "full": "Personally Identifiable Information",
+    "category": "Security",
+    "short": "Data that can identify a specific individual, such as a name or ID number.",
+    "description": "Any information that can be used, alone or combined with other data, to identify a specific individual, such as a name, national ID number, email address or phone number. Handling PII typically triggers privacy regulations like GDPR.",
+    "example": "A customer database storing names and home addresses contains PII and must be protected accordingly.",
+    "see_also": [
+      "GDPR",
+      "DLP"
+    ]
+  },
+  {
+    "abbr": "GDPR",
+    "full": "General Data Protection Regulation",
+    "category": "Security",
+    "short": "The EU's comprehensive law governing the privacy and protection of personal data.",
+    "description": "A European Union regulation that governs how organizations collect, store, process and protect the personal data of individuals in the EU, giving people rights over their own data and imposing significant fines for violations.",
+    "example": "A company must let an EU customer request a full export or deletion of their personal data under GDPR.",
+    "see_also": [
+      "PII",
+      "DLP"
+    ]
+  },
+  {
+    "abbr": "SOC",
+    "full": "Security Operations Center",
+    "category": "Security",
+    "short": "A team and facility that continuously monitors and responds to security threats.",
+    "description": "A centralized team responsible for continuously monitoring, detecting, investigating and responding to cybersecurity threats across an organization's systems and networks.",
+    "example": "A SOC analyst investigates an alert after unusual login attempts are detected on an executive's account.",
+    "see_also": [
+      "SIEM",
+      "IDS",
+      "CTI"
+    ]
+  },
+  {
+    "abbr": "SIEM",
+    "full": "Security Information and Event Management",
+    "category": "Security",
+    "short": "A platform that aggregates and analyzes security logs across an organization for threat detection.",
+    "description": "A platform that collects log and event data from across an organization's systems, correlates it, and flags patterns that suggest a security incident, forming the backbone of most SOC operations.",
+    "example": "A SIEM correlates a failed login on a laptop with a suspicious file download minutes later and raises an alert.",
+    "see_also": [
+      "SOC",
+      "IDS",
+      "SOAR"
+    ]
+  },
+  {
+    "abbr": "SOAR",
+    "full": "Security Orchestration, Automation and Response",
+    "category": "Security",
+    "short": "Tools that automate a security team's response to detected threats.",
+    "description": "A category of security tools that automate and orchestrate the response to detected incidents, such as isolating a compromised device or blocking an IP address, reducing the manual work required from analysts.",
+    "example": "A SOAR playbook automatically disables a user account the moment a SIEM flags credential-stuffing activity against it.",
+    "see_also": [
+      "SIEM",
+      "SOC"
+    ]
+  },
+  {
+    "abbr": "CTI",
+    "full": "Cyber Threat Intelligence",
+    "category": "Security",
+    "short": "Information about existing or emerging threats used to inform security decisions.",
+    "description": "Evidence-based knowledge about existing or emerging cyber threats, including attacker tactics and indicators of compromise, gathered and analyzed to help organizations anticipate and defend against attacks.",
+    "example": "A CTI feed warns a security team about a new ransomware strain targeting their industry before it hits their network.",
+    "see_also": [
+      "IOC",
+      "TTP",
+      "APT"
+    ]
+  },
+  {
+    "abbr": "IOC",
+    "full": "Indicator of Compromise",
+    "category": "Security",
+    "short": "Forensic evidence, like a file hash or IP address, that suggests a system has been breached.",
+    "description": "A piece of forensic data, such as a malicious file hash, IP address or registry key, that suggests a system has been compromised, used by defenders to detect and hunt for intrusions.",
+    "example": "Security tools block a file whose hash matches a known IOC from a recent ransomware campaign.",
+    "see_also": [
+      "CTI",
+      "TTP",
+      "IDS"
+    ]
+  },
+  {
+    "abbr": "TTP",
+    "full": "Tactics, Techniques and Procedures",
+    "category": "Security",
+    "short": "The patterns of behavior an attacker uses to carry out a cyberattack.",
+    "description": "A framework for describing an attacker's behavior at three levels: the overall tactic (the goal), the technique (how it's achieved) and the specific procedure (the exact implementation), used to profile and detect threat actors.",
+    "example": "Analysts recognize an intrusion's TTPs as matching a known ransomware group's playbook.",
+    "see_also": [
+      "CTI",
+      "IOC",
+      "APT"
+    ]
+  },
+  {
+    "abbr": "C2",
+    "full": "Command and Control",
+    "category": "Security",
+    "short": "The infrastructure an attacker uses to communicate with and control compromised systems.",
+    "description": "The servers and channels an attacker uses to send instructions to and receive data from malware running on compromised machines, a key part of most sustained cyberattacks.",
+    "example": "Malware on an infected laptop beacons out to a C2 server every hour for new instructions.",
+    "see_also": [
+      "APT",
+      "IOC"
+    ]
+  },
+  {
+    "abbr": "RCE",
+    "full": "Remote Code Execution",
+    "category": "Security",
+    "short": "A vulnerability that lets an attacker run arbitrary code on a target system from afar.",
+    "description": "A class of security vulnerability that allows an attacker to execute arbitrary code on a target system over a network, typically one of the most severe kinds of flaw since it can lead to full system compromise.",
+    "example": "An unpatched web server lets an attacker send a crafted request that triggers RCE and drops a backdoor.",
+    "see_also": [
+      "CVE",
+      "CVSS"
+    ]
+  },
+  {
+    "abbr": "SQLi",
+    "full": "SQL Injection",
+    "category": "Security",
+    "short": "An attack that inserts malicious SQL into a query to manipulate a database.",
+    "description": "A web security vulnerability where an attacker inserts malicious SQL code into an input field, tricking the application into running unintended database commands, potentially exposing or destroying data.",
+    "example": "Entering ' OR '1'='1 into a login form's username field bypasses authentication on a site vulnerable to SQLi.",
+    "see_also": [
+      "SQL",
+      "CSRF",
+      "XSS"
+    ]
+  },
+  {
+    "abbr": "OWASP",
+    "full": "Open Web Application Security Project",
+    "category": "Security",
+    "short": "A nonprofit whose Top 10 list of web vulnerabilities is a widely used security benchmark.",
+    "description": "A nonprofit foundation focused on improving software security, best known for its Top 10 list ranking the most critical web application security risks, widely used as a baseline for security reviews and training.",
+    "example": "A security audit checks the application against the current OWASP Top 10, including injection and broken access control.",
+    "see_also": [
+      "XSS",
+      "SQLi",
+      "CSRF"
+    ]
+  },
+  {
+    "abbr": "PKI",
+    "full": "Public Key Infrastructure",
+    "category": "Security",
+    "short": "The system of certificates, keys and authorities that makes public-key cryptography usable at scale.",
+    "description": "The policies, roles and technology needed to create, manage, distribute and revoke digital certificates and public keys, forming the trust foundation behind HTTPS and other secure communications.",
+    "example": "A browser trusts a website's HTTPS certificate because it was issued by a Certificate Authority within the web's PKI.",
+    "see_also": [
+      "CA",
+      "TLS",
+      "CSR"
+    ]
+  },
+  {
+    "abbr": "PGP",
+    "full": "Pretty Good Privacy",
+    "category": "Security",
+    "short": "An encryption program used to sign and encrypt emails and files.",
+    "description": "An encryption program that provides cryptographic privacy and authentication for data communication, most commonly used to encrypt and digitally sign emails and files. GPG is the widely used open-source implementation of its standard.",
+    "example": "A journalist encrypts a sensitive document with a source's PGP public key before emailing it.",
+    "see_also": [
+      "GPG",
+      "HMAC"
+    ]
+  },
+  {
+    "abbr": "GPG",
+    "full": "GNU Privacy Guard",
+    "category": "Security",
+    "short": "The free, open-source implementation of the OpenPGP encryption standard.",
+    "description": "A free and open-source tool implementing the OpenPGP standard, used to encrypt and sign data and communications; the most widely used implementation of PGP-style encryption today.",
+    "example": "A developer signs a software release with GPG so users can verify it hasn't been tampered with.",
+    "see_also": [
+      "PGP"
+    ]
+  },
+  {
+    "abbr": "AES",
+    "full": "Advanced Encryption Standard",
+    "category": "Security",
+    "short": "The symmetric encryption algorithm adopted as the U.S. government standard.",
+    "description": "A symmetric block cipher adopted as the U.S. government's encryption standard in 2001, now the most widely used algorithm worldwide for encrypting data at rest and in transit.",
+    "example": "A disk encryption tool protects a laptop's hard drive using AES-256.",
+    "see_also": [
+      "TLS",
+      "RSA"
+    ]
+  },
+  {
+    "abbr": "RSA",
+    "full": "Rivest, Shamir and Adleman",
+    "category": "Security",
+    "short": "A widely used public-key algorithm for encryption and digital signatures, named after its inventors.",
+    "description": "One of the first and most widely used public-key cryptosystems, used for secure data transmission and digital signatures, based on the mathematical difficulty of factoring large prime numbers.",
+    "example": "A web server's TLS certificate uses an RSA key pair to prove its identity during the handshake.",
+    "see_also": [
+      "PKI",
+      "TLS",
+      "AES"
+    ]
+  },
+  {
+    "abbr": "SHA",
+    "full": "Secure Hash Algorithm",
+    "category": "Security",
+    "short": "A family of cryptographic hash functions used to verify data integrity.",
+    "description": "A family of cryptographic hash functions, published by NIST, that turn data of any size into a fixed-length fingerprint, used to verify file integrity and to store passwords and digital signatures securely.",
+    "example": "A downloaded installer's SHA-256 checksum is compared against the one published on the vendor's site to confirm it wasn't tampered with.",
+    "see_also": [
+      "HMAC",
+      "MD5"
+    ]
+  },
+  {
+    "abbr": "MD5",
+    "full": "Message Digest Algorithm 5",
+    "category": "Security",
+    "short": "An older, now-broken hash function still seen for non-security checksums.",
+    "description": "An early cryptographic hash function that produces a 128-bit fingerprint of data; now considered cryptographically broken and unsuitable for security purposes, though still occasionally used for basic file integrity checks.",
+    "example": "A file-sharing tool still shows an MD5 checksum for quick corruption checks, but no longer relies on it for security.",
+    "see_also": [
+      "SHA"
+    ]
+  },
+  {
+    "abbr": "TOTP",
+    "full": "Time-based One-Time Password",
+    "category": "Security",
+    "short": "A short-lived numeric code that changes every 30 seconds, used for two-factor login.",
+    "description": "A one-time password algorithm that generates a new numeric code every 30 seconds based on a shared secret and the current time, commonly used as the second factor in two-factor authentication apps.",
+    "example": "An authenticator app shows a fresh six-digit TOTP code that a user enters alongside their password to log in.",
+    "see_also": [
+      "2FA",
+      "MFA",
+      "HOTP"
+    ]
+  },
+  {
+    "abbr": "HOTP",
+    "full": "HMAC-based One-Time Password",
+    "category": "Security",
+    "short": "A one-time password that changes each time it's used, based on a counter instead of time.",
+    "description": "A one-time password algorithm that generates a new code each time it's requested, driven by an incrementing counter rather than the clock, as used by some hardware security tokens.",
+    "example": "Pressing the button on a hardware token generates the next HOTP code in its sequence.",
+    "see_also": [
+      "TOTP",
+      "MFA",
+      "HMAC"
+    ]
+  },
+  {
+    "abbr": "PAM",
+    "full": "Privileged Access Management",
+    "category": "Security",
+    "short": "Tools and practices for controlling and monitoring accounts with elevated system access.",
+    "description": "A set of tools and practices for securing, controlling and auditing accounts with elevated privileges, such as administrator or root accounts, to reduce the risk of misuse or compromise.",
+    "example": "A PAM system requires an admin to check out a temporary, logged password before accessing a production server.",
+    "see_also": [
+      "IAM",
+      "RBAC",
+      "MFA"
+    ]
+  },
+  {
+    "abbr": "LDAP",
+    "full": "Lightweight Directory Access Protocol",
+    "category": "Protocol",
+    "short": "A protocol for looking up and managing directory information like users and groups.",
+    "description": "A protocol used to access and maintain distributed directory information services, most commonly for looking up users, groups and permissions in systems like Active Directory.",
+    "example": "An application authenticates a user by checking their credentials against the company's LDAP directory.",
+    "see_also": [
+      "AD",
+      "SSO",
+      "IAM"
+    ]
+  },
+  {
+    "abbr": "SAML",
+    "full": "Security Assertion Markup Language",
+    "category": "Protocol",
+    "short": "An XML-based standard for exchanging authentication data between an identity provider and a service.",
+    "description": "An XML-based open standard for exchanging authentication and authorization data between an identity provider and a service provider, commonly used to implement single sign-on for enterprise web applications.",
+    "example": "Logging into a corporate app redirects the user to the company's identity provider, which sends back a signed SAML assertion confirming who they are.",
+    "see_also": [
+      "SSO",
+      "OIDC",
+      "IAM"
+    ]
+  },
+  {
+    "abbr": "OIDC",
+    "full": "OpenID Connect",
+    "category": "Protocol",
+    "short": "An identity layer built on top of OAuth 2.0 for verifying who a user is.",
+    "description": "An authentication protocol built on top of OAuth 2.0 that lets applications verify a user's identity and obtain basic profile information, commonly used to power 'Sign in with...' buttons.",
+    "example": "A website's 'Sign in with Google' button uses OIDC to confirm the user's identity after they authorize access.",
+    "see_also": [
+      "OAuth",
+      "SAML",
+      "JWT"
+    ]
+  },
+  {
+    "abbr": "IMAP",
+    "full": "Internet Message Access Protocol",
+    "category": "Protocol",
+    "short": "A protocol for retrieving and syncing email that keeps messages stored on the server.",
+    "description": "A protocol for retrieving email from a mail server that keeps messages stored on the server and synchronized across multiple devices, unlike POP3 which typically downloads and removes them.",
+    "example": "Checking the same inbox from a phone and a laptop shows matching read/unread status because both use IMAP.",
+    "see_also": [
+      "POP3",
+      "SMTP"
+    ]
+  },
+  {
+    "abbr": "SFTP",
+    "full": "SSH File Transfer Protocol",
+    "category": "Protocol",
+    "short": "A secure file transfer protocol that runs over an SSH connection.",
+    "description": "A file transfer protocol that runs over an encrypted SSH connection, providing secure file listing, transfer and management, unlike plain FTP which sends data unencrypted.",
+    "example": "A web agency uploads a client's website files over SFTP instead of unencrypted FTP.",
+    "see_also": [
+      "FTP",
+      "SSH",
+      "SCP"
+    ]
+  },
+  {
+    "abbr": "SCP",
+    "full": "Secure Copy Protocol",
+    "category": "Protocol",
+    "short": "A simple command-line protocol for securely copying files over SSH.",
+    "description": "A protocol and command-line tool for securely copying files between hosts over an SSH connection, simpler than SFTP but with fewer features like directory listing.",
+    "example": "An admin runs 'scp report.csv user@server:/backups/' to copy a file to a remote server.",
+    "see_also": [
+      "SFTP",
+      "SSH"
+    ]
+  },
+  {
+    "abbr": "VLAN",
+    "full": "Virtual Local Area Network",
+    "category": "Networking",
+    "short": "A logically separate network created within a physical network.",
+    "description": "A technique for partitioning a single physical network into multiple logically isolated networks, so devices on different VLANs behave as if they were on separate physical networks even while sharing the same switches.",
+    "example": "An office puts guest Wi-Fi on its own VLAN so visitors can't reach internal file servers.",
+    "see_also": [
+      "LAN",
+      "VPN"
+    ]
+  },
+  {
+    "abbr": "BGP",
+    "full": "Border Gateway Protocol",
+    "category": "Networking",
+    "short": "The protocol that routes traffic between different networks across the internet.",
+    "description": "The routing protocol that exchanges routing information between autonomous systems, effectively deciding how traffic finds its way across the global internet between different networks and providers.",
+    "example": "An ISP announces its network's routes to other providers via BGP so traffic from anywhere can find its way in.",
+    "see_also": [
+      "IP",
+      "CIDR",
+      "OSPF"
+    ]
+  },
+  {
+    "abbr": "ARP",
+    "full": "Address Resolution Protocol",
+    "category": "Networking",
+    "short": "A protocol that maps an IP address to a device's physical MAC address on a local network.",
+    "description": "A protocol used on local networks to discover which physical MAC address corresponds to a given IP address, letting devices on the same network segment actually deliver packets to each other.",
+    "example": "Before sending a packet on the local network, a computer broadcasts an ARP request to find the MAC address behind an IP.",
+    "see_also": [
+      "IP",
+      "MAC",
+      "LAN"
+    ]
+  },
+  {
+    "abbr": "ICMP",
+    "full": "Internet Control Message Protocol",
+    "category": "Networking",
+    "short": "A protocol used for network diagnostics and error reporting, as used by ping.",
+    "description": "A network-layer protocol used to send diagnostic and error messages between devices, such as reporting that a destination is unreachable; the basis for tools like ping and traceroute.",
+    "example": "Running 'ping' sends ICMP echo requests to a host and waits for ICMP echo replies to measure latency.",
+    "see_also": [
+      "IP",
+      "TCP/IP"
+    ]
+  },
+  {
+    "abbr": "SD-WAN",
+    "full": "Software-Defined Wide Area Network",
+    "category": "Networking",
+    "short": "A software-based approach to managing and routing traffic across a wide area network.",
+    "description": "An approach to managing a wide area network using software-based control rather than dedicated hardware at each site, letting traffic be routed intelligently across multiple connections like broadband and MPLS based on real-time conditions.",
+    "example": "A retailer with 200 stores uses SD-WAN to automatically shift traffic from a congested MPLS link to a backup broadband connection.",
+    "see_also": [
+      "MPLS",
+      "WAN",
+      "VPN"
+    ]
+  },
+  {
+    "abbr": "MPLS",
+    "full": "Multiprotocol Label Switching",
+    "category": "Networking",
+    "short": "A technique for speeding up and directing network traffic using short path labels instead of long lookups.",
+    "description": "A networking technique that directs data between nodes using short, fixed-length labels rather than long network addresses, historically used by enterprises and carriers to build fast, predictable wide area networks.",
+    "example": "A bank connects its branches over a private MPLS network to guarantee consistent performance for card transactions.",
+    "see_also": [
+      "WAN",
+      "SD-WAN",
+      "BGP"
+    ]
+  },
+  {
+    "abbr": "SIP",
+    "full": "Session Initiation Protocol",
+    "category": "Protocol",
+    "short": "A protocol for setting up and managing voice, video and messaging calls.",
+    "description": "A signaling protocol used to establish, modify and terminate real-time sessions such as voice and video calls over IP networks, forming the basis of most VoIP systems.",
+    "example": "An office phone system uses SIP to set up a call, then streams the actual audio over RTP.",
+    "see_also": [
+      "VoIP",
+      "RTP"
+    ]
+  },
+  {
+    "abbr": "RTP",
+    "full": "Real-time Transport Protocol",
+    "category": "Protocol",
+    "short": "A protocol for delivering audio and video data over IP networks in real time.",
+    "description": "A network protocol for delivering audio and video over IP networks with the timing guarantees real-time communication needs, typically used alongside a signaling protocol like SIP to carry the actual media stream.",
+    "example": "During a VoIP call, SIP sets up the session while the voice audio itself streams over RTP.",
+    "see_also": [
+      "SIP",
+      "VoIP"
+    ]
+  },
+  {
+    "abbr": "B2B",
+    "full": "Business-to-Business",
+    "category": "Business",
+    "short": "Commerce or software sold from one business to another, rather than to consumers.",
+    "description": "A category of commerce, marketing or software where the customer is another business rather than an individual consumer, typically involving longer sales cycles and multiple decision-makers.",
+    "example": "A company selling inventory management software to warehouses operates a B2B business model.",
+    "see_also": [
+      "B2C",
+      "SaaS"
+    ]
+  },
+  {
+    "abbr": "B2C",
+    "full": "Business-to-Consumer",
+    "category": "Business",
+    "short": "Commerce or software sold directly to individual consumers.",
+    "description": "A category of commerce, marketing or software where the customer is an individual consumer rather than another business, typically involving shorter sales cycles and self-service purchasing.",
+    "example": "An online clothing retailer selling directly to shoppers operates a B2C business model.",
+    "see_also": [
+      "B2B"
+    ]
+  },
+  {
+    "abbr": "ARR",
+    "full": "Annual Recurring Revenue",
+    "category": "Business",
+    "short": "The yearly value of a company's ongoing subscription revenue.",
+    "description": "A metric used mainly by subscription businesses to express the value of recurring revenue on an annualized basis, giving a normalized way to track growth regardless of contract length.",
+    "example": "A SaaS company with $100,000 in monthly recurring revenue reports roughly $1.2 million in ARR.",
+    "see_also": [
+      "MRR",
+      "SaaS",
+      "KPI"
+    ]
+  },
+  {
+    "abbr": "MRR",
+    "full": "Monthly Recurring Revenue",
+    "category": "Business",
+    "short": "The monthly value of a company's ongoing subscription revenue.",
+    "description": "A metric used by subscription businesses to express recurring revenue normalized to a monthly figure, used to track growth, churn and the health of the subscription base month over month.",
+    "example": "A startup's MRR grows from $8,000 to $10,000 after a marketing push adds new subscribers.",
+    "see_also": [
+      "ARR",
+      "SaaS"
+    ]
+  },
+  {
+    "abbr": "ROI",
+    "full": "Return on Investment",
+    "category": "Business",
+    "short": "A measure of the profit or benefit gained relative to the cost of an investment.",
+    "description": "A performance measure used to evaluate the efficiency of an investment, calculated as the benefit gained divided by the cost, used to compare and justify spending decisions.",
+    "example": "A marketing campaign that generates $50,000 in sales for a $10,000 spend delivers a 5x ROI.",
+    "see_also": [
+      "KPI",
+      "TAM"
+    ]
+  },
+  {
+    "abbr": "TAM",
+    "full": "Total Addressable Market",
+    "category": "Business",
+    "short": "The total revenue opportunity available if a product captured 100% of its market.",
+    "description": "An estimate of the total revenue opportunity available for a product or service if it achieved 100% market share, used in business planning and investor pitches to size an opportunity.",
+    "example": "A startup pitches investors on a $10 billion TAM for cloud backup software worldwide.",
+    "see_also": [
+      "SAM",
+      "SOM"
+    ]
+  },
+  {
+    "abbr": "SAM",
+    "full": "Serviceable Addressable Market",
+    "category": "Business",
+    "short": "The portion of the total market a company's product or service could realistically target.",
+    "description": "The segment of the Total Addressable Market that a specific product or business model could realistically serve, narrowing TAM by factors like geography, product fit or regulation.",
+    "example": "Out of a $10 billion global TAM, a startup's SAM is the $2 billion segment of mid-sized businesses in Europe it can actually sell to.",
+    "see_also": [
+      "TAM",
+      "SOM"
+    ]
+  },
+  {
+    "abbr": "SOM",
+    "full": "Serviceable Obtainable Market",
+    "category": "Business",
+    "short": "The realistic portion of the market a company can actually capture in the near term.",
+    "description": "The portion of the Serviceable Addressable Market that a company can realistically capture in a given timeframe, accounting for competition, sales capacity and go-to-market constraints.",
+    "example": "A startup projects a $50 million SOM for its first three years, a small slice of its $2 billion SAM.",
+    "see_also": [
+      "SAM",
+      "TAM"
+    ]
+  },
+  {
+    "abbr": "CAC",
+    "full": "Customer Acquisition Cost",
+    "category": "Business",
+    "short": "The average cost of acquiring one new paying customer.",
+    "description": "A metric that divides total sales and marketing spend by the number of new customers acquired in a period, used alongside customer lifetime value to judge whether growth spending is sustainable.",
+    "example": "Spending $20,000 on ads to acquire 100 new customers gives a CAC of $200 per customer.",
+    "see_also": [
+      "LTV",
+      "ROI"
+    ]
+  },
+  {
+    "abbr": "LTV",
+    "full": "Lifetime Value",
+    "category": "Business",
+    "short": "The total revenue a business expects to earn from a customer over the entire relationship.",
+    "description": "An estimate of the total revenue a business will earn from a single customer over the full length of their relationship, used alongside CAC to judge whether the cost of acquiring customers is worthwhile.",
+    "example": "A subscriber who pays $20/month and stays for three years represents roughly $720 in LTV.",
+    "see_also": [
+      "CAC",
+      "MRR",
+      "ARR"
+    ]
+  },
+  {
+    "abbr": "SEM",
+    "full": "Search Engine Marketing",
+    "category": "Business",
+    "short": "Paid advertising that promotes a site in search engine results.",
+    "description": "A digital marketing discipline focused on increasing a website's visibility in search engine results through paid advertising, most commonly pay-per-click ads shown alongside organic results.",
+    "example": "A company runs an SEM campaign so its ad appears at the top of search results for 'project management software'.",
+    "see_also": [
+      "SEO",
+      "CTR"
+    ]
+  },
+  {
+    "abbr": "CTR",
+    "full": "Click-Through Rate",
+    "category": "Business",
+    "short": "The percentage of people who click a link or ad after seeing it.",
+    "description": "A metric calculated as the number of clicks an ad or link receives divided by the number of times it was shown, used to gauge how compelling that ad, headline or link is.",
+    "example": "An email subject line test shows Version A gets a 12% CTR compared to 7% for Version B.",
+    "see_also": [
+      "SEM",
+      "SEO"
+    ]
+  },
+  {
+    "abbr": "CMS",
+    "full": "Content Management System",
+    "category": "Software",
+    "short": "Software for creating, editing and publishing content on a website without coding.",
+    "description": "A software platform that lets non-technical users create, manage and publish digital content such as web pages and blog posts, typically through a visual editor rather than writing raw HTML.",
+    "example": "A marketing team publishes a new blog post through the CMS without needing a developer to touch any code.",
+    "see_also": [
+      "SPA",
+      "SSG"
+    ]
+  },
+  {
+    "abbr": "UGC",
+    "full": "User-Generated Content",
+    "category": "Business",
+    "short": "Content created and shared by a platform's users rather than the platform itself.",
+    "description": "Any content, such as reviews, photos, videos or posts, created and published by a platform's users rather than the platform or brand itself, often used to build trust or drive engagement.",
+    "example": "An online store displays customer photo reviews as UGC alongside its own product images.",
+    "see_also": [
+      "CMS"
+    ]
+  },
+  {
+    "abbr": "UEFI",
+    "full": "Unified Extensible Firmware Interface",
+    "category": "Hardware",
+    "short": "The modern firmware interface that replaced the legacy PC BIOS.",
+    "description": "A modern firmware specification that replaced the legacy PC BIOS, providing a graphical setup interface, faster boot times, support for large drives and features like Secure Boot.",
+    "example": "A new laptop's UEFI setup screen lets a user enable Secure Boot and change the boot order with a mouse.",
+    "see_also": [
+      "BIOS"
+    ]
+  },
+  {
+    "abbr": "TPU",
+    "full": "Tensor Processing Unit",
+    "category": "Hardware",
+    "short": "A custom processor designed by Google specifically to accelerate machine learning workloads.",
+    "description": "An application-specific integrated circuit developed by Google to accelerate machine learning workloads, particularly the matrix operations used in training and running neural networks, as an alternative to using GPUs.",
+    "example": "A research team trains a large neural network on a cluster of TPUs instead of GPUs to cut training time.",
+    "see_also": [
+      "GPU",
+      "AI",
+      "ML"
+    ]
+  },
+  {
+    "abbr": "DL",
+    "full": "Deep Learning",
+    "category": "AI/ML",
+    "short": "A branch of machine learning using multi-layered neural networks.",
+    "description": "A subset of machine learning that uses neural networks with many layers to automatically learn increasingly abstract representations of data, powering most modern advances in image recognition, speech and language.",
+    "example": "A DL model with dozens of layers learns to recognize cats in photos directly from raw pixels, no hand-crafted features needed.",
+    "see_also": [
+      "ML",
+      "AI",
+      "CNN"
+    ]
+  },
+  {
+    "abbr": "CNN",
+    "full": "Convolutional Neural Network",
+    "category": "AI/ML",
+    "short": "A neural network architecture especially effective at processing images.",
+    "description": "A type of neural network that uses convolutional layers to automatically detect spatial patterns like edges, textures and shapes, making it especially effective for image and video recognition tasks.",
+    "example": "A CNN trained on thousands of x-rays learns to flag scans that show signs of pneumonia.",
+    "see_also": [
+      "DL",
+      "ML",
+      "AI"
+    ]
+  },
+  {
+    "abbr": "RNN",
+    "full": "Recurrent Neural Network",
+    "category": "AI/ML",
+    "short": "A neural network architecture designed to handle sequential data like text or time series.",
+    "description": "A type of neural network with connections that loop back on themselves, giving it a form of memory that makes it well suited to sequential data such as text, speech or time series, though largely superseded by transformers for language tasks.",
+    "example": "An older predictive-text keyboard uses an RNN to guess the next word based on the words typed so far.",
+    "see_also": [
+      "LSTM",
+      "DL",
+      "LLM"
+    ]
+  },
+  {
+    "abbr": "LSTM",
+    "full": "Long Short-Term Memory",
+    "category": "AI/ML",
+    "short": "A type of RNN designed to remember information over long sequences.",
+    "description": "A type of recurrent neural network architecture designed to better capture long-range dependencies in sequential data by using gates that control what information is kept, forgotten or output at each step.",
+    "example": "An LSTM-based model translates a long sentence by tracking context from words spoken well earlier in the sequence.",
+    "see_also": [
+      "RNN",
+      "DL"
+    ]
+  },
+  {
+    "abbr": "GPT",
+    "full": "Generative Pre-trained Transformer",
+    "category": "AI/ML",
+    "short": "A family of large language models pre-trained to generate human-like text.",
+    "description": "A family of transformer-based language models that are pre-trained on large amounts of text to predict the next word, then fine-tuned or prompted to perform tasks like answering questions, writing and coding.",
+    "example": "A customer support tool is built on a GPT-based model that drafts replies to incoming tickets.",
+    "see_also": [
+      "LLM",
+      "AI",
+      "NLP"
+    ]
+  },
+  {
+    "abbr": "NLU",
+    "full": "Natural Language Understanding",
+    "category": "AI/ML",
+    "short": "The subfield of NLP focused on extracting meaning and intent from text.",
+    "description": "A subfield of natural language processing focused specifically on machines correctly interpreting the meaning, intent and structure behind human language, as opposed to generating language.",
+    "example": "A voice assistant's NLU component figures out that 'turn it down' means lower the volume, not the temperature.",
+    "see_also": [
+      "NLP",
+      "AI",
+      "LLM"
+    ]
+  },
+  {
+    "abbr": "CV",
+    "full": "Computer Vision",
+    "category": "AI/ML",
+    "short": "The field of AI focused on enabling computers to interpret images and video.",
+    "description": "A field of artificial intelligence focused on enabling computers to interpret, analyze and understand visual information from images and video, powering applications like facial recognition and self-driving cars.",
+    "example": "A warehouse uses CV to automatically count and identify items on a conveyor belt from camera footage.",
+    "see_also": [
+      "AI",
+      "ML",
+      "CNN"
+    ]
+  },
+  {
+    "abbr": "GAN",
+    "full": "Generative Adversarial Network",
+    "category": "AI/ML",
+    "short": "A pair of neural networks that compete to produce increasingly realistic synthetic data.",
+    "description": "A machine learning architecture consisting of two neural networks, a generator and a discriminator, trained against each other so the generator gets progressively better at producing realistic synthetic data, such as images.",
+    "example": "A GAN trained on thousands of faces learns to generate convincing photos of people who don't exist.",
+    "see_also": [
+      "DL",
+      "AI"
+    ]
+  },
+  {
+    "abbr": "EMM",
+    "full": "Enterprise Mobility Management",
+    "category": "Security",
+    "short": "Tools for managing and securing an organization's mobile devices, apps and data together.",
+    "description": "A broader category than MDM that covers managing and securing an organization's mobile devices, the applications on them, and the corporate data those apps access, typically as a suite of integrated tools.",
+    "example": "An EMM suite lets IT wipe just the corporate email and files on an employee's personal phone, leaving their photos alone.",
+    "see_also": [
+      "MDM",
+      "UEM",
+      "ByoD"
+    ]
+  },
+  {
+    "abbr": "UEM",
+    "full": "Unified Endpoint Management",
+    "category": "Security",
+    "short": "Managing all of an organization's device types, mobile and desktop, from a single platform.",
+    "description": "A management approach and tool category that consolidates the management of all endpoint types, phones, tablets, laptops and desktops, into a single platform rather than separate tools for mobile and desktop.",
+    "example": "IT pushes the same security policy to employees' laptops and phones from one UEM console instead of two separate systems.",
+    "see_also": [
+      "MDM",
+      "EMM"
+    ]
+  },
+  {
+    "abbr": "XDR",
+    "full": "Extended Detection and Response",
+    "category": "Security",
+    "short": "Security tooling that correlates threat data across endpoints, networks and cloud in one platform.",
+    "description": "A security approach that unifies detection and response data across multiple layers, endpoints, networks, email and cloud, into a single platform, aiming to catch attacks that span more than one system.",
+    "example": "An XDR platform links a suspicious email attachment to the malware it later installed on the recipient's laptop.",
+    "see_also": [
+      "EDR",
+      "SIEM"
+    ]
+  },
+  {
+    "abbr": "SASE",
+    "full": "Secure Access Service Edge",
+    "category": "Security",
+    "short": "A cloud architecture that bundles networking and security into a single delivered service.",
+    "description": "A cloud-delivered architecture that combines wide-area networking with security functions like a firewall and zero trust access into a single service, so users get consistent security wherever they connect from.",
+    "example": "Remote employees connect through a SASE provider that enforces the same firewall and access rules whether they're at home or in the office.",
+    "see_also": [
+      "ZTNA",
+      "SD-WAN",
+      "VPN"
+    ]
+  },
+  {
+    "abbr": "ZTNA",
+    "full": "Zero Trust Network Access",
+    "category": "Security",
+    "short": "A security model that grants access based on continuous verification, not network location.",
+    "description": "A security model built on the principle of 'never trust, always verify', granting access to specific applications only after continuously verifying a user's identity and device, rather than trusting anyone already inside the network perimeter.",
+    "example": "An employee working from a coffee shop gets access to just the one internal app they need through a ZTNA gateway, not the whole network.",
+    "see_also": [
+      "SASE",
+      "VPN",
+      "IAM"
+    ]
   }
 ]
